@@ -50,7 +50,7 @@ const PROJECTS: {
     place: "Budynek mieszkalny, woj. lubuskie",
     alt: "Jednostki zewnętrzne klimatyzacji na elewacji",
     focus: "50% 40%",
-    span: "wide",
+    span: "tall",
   },
   {
     image: imgKociol,
@@ -60,7 +60,7 @@ const PROJECTS: {
     place: "Dom, okolice Zielonej Góry",
     alt: "Nowoczesny kocioł gazowy w kotłowni",
     focus: "50% 42%",
-    span: "sm",
+    span: "tall",
   },
   {
     image: imgSolary,
@@ -70,7 +70,7 @@ const PROJECTS: {
     place: "Dach domu, woj. lubuskie",
     alt: "Kolektory solarne na dachu budynku",
     focus: "50% 40%",
-    span: "sm",
+    span: "wide",
   },
   {
     image: imgTermo,
@@ -168,7 +168,7 @@ export function Realizations() {
             <span className="text-gradient-cyan">już działają</span>
           </h2>
           <p className="mt-4 max-w-2xl text-navy-foreground/70">
-            Kotły, pompy ciepła, klimatyzacja i solary — przykładowe realizacje w stylu prac
+            Kotły, pompy ciepła, klimatyzacja i solary - przykładowe realizacje w stylu prac
             Instal-Plast na terenie Zielonej Góry i Lubuskiego.
           </p>
         </Reveal>

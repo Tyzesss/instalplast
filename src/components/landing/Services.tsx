@@ -25,7 +25,7 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
   const Icon = ICONS[service.slug] ?? Thermometer;
 
   return (
-    <article className="group flex h-full min-w-0 flex-col rounded-2xl border border-border/70 bg-card p-7 shadow-[0_2px_8px_oklch(0.155_0.045_242/0.08),0_16px_40px_oklch(0.155_0.045_242/0.14)] max-md:shadow-[0_2px_6px_oklch(0.155_0.045_242/0.08),0_10px_24px_oklch(0.155_0.045_242/0.1)] md:overflow-hidden md:transition-all md:duration-500 md:ease-[cubic-bezier(0.22,1,0.36,1)] md:hover:-translate-y-1 md:hover:border-accent/40 md:hover:shadow-[0_4px_12px_oklch(0.155_0.045_242/0.1),0_28px_56px_oklch(0.155_0.045_242/0.2)]">
+    <article className="group flex h-full min-w-0 flex-col rounded-2xl border border-border/70 bg-card p-7 shadow-[0_2px_8px_oklch(0.18_0.02_40/0.08),0_16px_40px_oklch(0.18_0.02_40/0.14)] max-md:shadow-[0_2px_6px_oklch(0.18_0.02_40/0.08),0_10px_24px_oklch(0.18_0.02_40/0.1)] md:overflow-hidden md:transition-all md:duration-500 md:ease-[cubic-bezier(0.22,1,0.36,1)] md:hover:-translate-y-1 md:hover:border-accent/40 md:hover:shadow-[0_4px_12px_oklch(0.18_0.02_40/0.1),0_28px_56px_oklch(0.18_0.02_40/0.2)]">
       <div className="flex min-w-0 items-center gap-3.5 md:block">
         <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-cyan text-white transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:size-12 md:bg-navy md:text-navy-foreground md:group-hover:bg-gradient-cyan md:group-hover:text-white">
           <Icon className="size-5" />

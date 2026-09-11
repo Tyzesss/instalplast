@@ -27,11 +27,11 @@ const ITEMS = [
   },
   {
     q: "Na jakim terenie działacie?",
-    a: "Głównie Zielona Góra i województwo lubuskie — m.in. Nowa Sól, Sulechów, Świebodzin, Żagań, Żary i okolice. Szczegóły w sekcji Obszar działania.",
+    a: "Głównie Zielona Góra i województwo lubuskie - m.in. Nowa Sól, Sulechów, Świebodzin, Żagań, Żary i okolice. Szczegóły w sekcji Obszar działania.",
   },
   {
     q: "Czy robicie też serwis istniejących instalacji?",
-    a: "Tak. Serwis 24/7: przeglądy, awarie, uruchomienia i wsparcie pogwarancyjne — także dla instalacji montowanych wcześniej.",
+    a: "Tak. Serwis 24/7: przeglądy, awarie, uruchomienia i wsparcie pogwarancyjne - także dla instalacji montowanych wcześniej.",
   },
 ];
 

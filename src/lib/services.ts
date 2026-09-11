@@ -26,7 +26,7 @@ export const SERVICE_PROCESS = [
   {
     step: "01",
     title: "Oględziny i konsultacja",
-    body: "Oglądamy budynek, ustalamy potrzeby i kierunek — bez zobowiązań.",
+    body: "Oglądamy budynek, ustalamy potrzeby i kierunek - bez zobowiązań.",
   },
   {
     step: "02",
@@ -41,7 +41,7 @@ export const SERVICE_PROCESS = [
   {
     step: "04",
     title: "Serwis",
-    body: "Przeglądy, regulacja i wsparcie po oddaniu instalacji — także dyżur 24/7.",
+    body: "Przeglądy, regulacja i wsparcie po oddaniu instalacji - także dyżur 24/7.",
   },
 ] as const;
 
@@ -108,7 +108,7 @@ export const SERVICES: Service[] = [
       "Sprzedaż i montaż kotłów gazowych oraz olejowych (kondensacyjne, niskotemperaturowe) w Zielonej Górze i na Lubuskiem. Viessmann, Brötje, De Dietrich i inne.",
     short: "Kotły gazowe i olejowe: dobór mocy, montaż i uruchomienie kotłowni.",
     intro:
-      "Sprzedaż i montaż kotłów gazowych oraz olejowych — kondensacyjnych i niskotemperaturowych. Dobór mocy, montaż i uruchomienie z instruktażem.",
+      "Sprzedaż i montaż kotłów gazowych oraz olejowych - kondensacyjnych i niskotemperaturowych. Dobór mocy, montaż i uruchomienie z instruktażem.",
     area: AREA_DEFAULT,
     sections: [
       {
@@ -130,12 +130,12 @@ export const SERVICES: Service[] = [
     ],
     faq: [
       {
-        q: "Gaz czy olej — co wybrać?",
+        q: "Gaz czy olej - co wybrać?",
         a: "Zależy od przyłącza gazu, kosztów paliwa i układu kotłowni. Porównujemy warianty na oględzinach.",
       },
       {
         q: "Czy montujecie kotły kondensacyjne?",
-        a: "Tak — to standard w naszej ofercie gazowej, przy odpowiednim odprowadzeniu kondensatu i spalin.",
+        a: "Tak - to standard w naszej ofercie gazowej, przy odpowiednim odprowadzeniu kondensatu i spalin.",
       },
     ],
     match: ["kotł", "gazow", "olejow", "kondensacyj"],
@@ -150,7 +150,7 @@ export const SERVICES: Service[] = [
       "Sprzedaż i montaż pomp ciepła w Zielonej Górze i województwie lubuskim. Dobór mocy, uruchomienie i serwis. Bezpłatna konsultacja.",
     short: "Dobór i montaż pomp ciepła: ogrzewanie, chłodzenie i ciepła woda.",
     intro:
-      "Sprzedaż i montaż pomp ciepła dla domów i obiektów. Niższe koszty ogrzewania, komfort przez cały rok — z uruchomieniem i instruktażem.",
+      "Sprzedaż i montaż pomp ciepła dla domów i obiektów. Niższe koszty ogrzewania, komfort przez cały rok - z uruchomieniem i instruktażem.",
     area: AREA_DEFAULT,
     sections: [
       {
@@ -190,14 +190,14 @@ export const SERVICES: Service[] = [
     seoTitle: "Klimatyzacja Zielona Góra | wentylacja | Instal-Plast",
     seoDescription:
       "Sprzedaż i montaż klimatyzacji oraz wentylacji do biur i mieszkań w Zielonej Górze. Airwell, Acson, Dospel. Serwis gwarancyjny i pogwarancyjny.",
-    short: "Klimatyzacja i wentylacja do biur i mieszkań — montaż i serwis.",
+    short: "Klimatyzacja i wentylacja do biur i mieszkań - montaż i serwis.",
     intro:
       "Sprzedaż i montaż klimatyzatorów oraz systemów wentylacji do biur i mieszkań. Uruchomienie, przeglądy i serwis.",
     area: AREA_DEFAULT,
     sections: [
       {
         heading: "Komfort latem i poza sezonem",
-        body: "Dobieramy moc do pomieszczeń i nasłonecznienia. W ofercie m.in. urządzenia Airwell, Acson i Dospel — z jonizacją i programami pracy dziennej / nocnej.",
+        body: "Dobieramy moc do pomieszczeń i nasłonecznienia. W ofercie m.in. urządzenia Airwell, Acson i Dospel - z jonizacją i programami pracy dziennej / nocnej.",
       },
       {
         heading: "Montaż i serwis",
@@ -215,11 +215,11 @@ export const SERVICES: Service[] = [
     faq: [
       {
         q: "Czy klimatyzacja też grzeje?",
-        a: "Tak, większość nowoczesnych jednostek pracuje w trybie grzania — dobra opcja uzupełniająca poza sezonem.",
+        a: "Tak, większość nowoczesnych jednostek pracuje w trybie grzania - dobra opcja uzupełniająca poza sezonem.",
       },
       {
         q: "Czy serwisujecie urządzenia kupione indziej?",
-        a: "Tak — przeglądy i naprawy uzgadniamy po oględzinach.",
+        a: "Tak - przeglądy i naprawy uzgadniamy po oględzinach.",
       },
     ],
     match: ["klimatyz", "wentylac", "split", "airwell"],
@@ -228,13 +228,13 @@ export const SERVICES: Service[] = [
     slug: "badania-termowizyjne",
     title: "Badania termowizyjne",
     titleOf: "badań termowizyjnych",
-    headline: "Badania termowizyjne Flir — Zielona Góra",
+    headline: "Badania termowizyjne Flir - Zielona Góra",
     seoTitle: "Termowizja Zielona Góra | kamera Flir | Instal-Plast",
     seoDescription:
       "Pomiary termowizyjne kamerą Flir w Zielonej Górze. Wykrywanie mostków cieplnych i braków izolacji. Raport z rekomendacjami.",
     short: "Kamera Flir: mostki cieplne, braki izolacji, diagnoza budynku.",
     intro:
-      "Pomiary termowizyjne nowoczesną kamerą Flir — analiza wycieków ciepła i braków izolacji w budynku.",
+      "Pomiary termowizyjne nowoczesną kamerą Flir - analiza wycieków ciepła i braków izolacji w budynku.",
     area: AREA_DEFAULT,
     sections: [
       {
@@ -257,7 +257,7 @@ export const SERVICES: Service[] = [
     faq: [
       {
         q: "Kiedy najlepiej robić badanie?",
-        a: "Gdy jest wyraźna różnica temperatur wewnątrz i na zewnątrz — wtedy termogramy są najbardziej czytelne.",
+        a: "Gdy jest wyraźna różnica temperatur wewnątrz i na zewnątrz - wtedy termogramy są najbardziej czytelne.",
       },
       {
         q: "Czy dostaję raport?",
@@ -270,11 +270,11 @@ export const SERVICES: Service[] = [
     slug: "kotly-biopaliwa",
     title: "Kotły na biopaliwa",
     titleOf: "kotłów na biopaliwa",
-    headline: "Kotły na biopaliwa — Zielona Góra i Lubuskie",
+    headline: "Kotły na biopaliwa - Zielona Góra i Lubuskie",
     seoTitle: "Kotły na biopaliwa Zielona Góra | biomasa | Instal-Plast",
     seoDescription:
-      "Kotły na biopaliwa (biomasa, holzgas) — sprzedaż i montaż w Zielonej Górze. Dobór mocy, kotłownia, uruchomienie.",
-    short: "Kotły na biomasę i holzgas — ekologiczne źródło ciepła.",
+      "Kotły na biopaliwa (biomasa, holzgas) - sprzedaż i montaż w Zielonej Górze. Dobór mocy, kotłownia, uruchomienie.",
+    short: "Kotły na biomasę i holzgas - ekologiczne źródło ciepła.",
     intro:
       "Kotły z dziedziny biopaliw (biomasa, holzgas): dobór mocy, montaż i uruchomienie jako ekologiczne źródło ciepła.",
     area: AREA_DEFAULT,
@@ -316,7 +316,7 @@ export const SERVICES: Service[] = [
     seoTitle: "Kolektory słoneczne Zielona Góra | solary | Instal-Plast",
     seoDescription:
       "Montaż systemów solarnych (kolektory) w Zielonej Górze i na Lubuskiem. CWU z energią słoneczną, integracja z kotłem lub pompą.",
-    short: "Kolektory słoneczne do CWU — montaż i integracja z kotłownią.",
+    short: "Kolektory słoneczne do CWU - montaż i integracja z kotłownią.",
     intro:
       "Systemy solarne do podgrzewu wody użytkowej: dobór kolektorów, montaż i integracja z istniejącym źródłem ciepła.",
     area: AREA_DEFAULT,
@@ -345,7 +345,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "Czy da się dołożyć solary do istniejącej kotłowni?",
-        a: "Często tak — po ocenie zasobnika, miejsca na kolektory i automatyki.",
+        a: "Często tak - po ocenie zasobnika, miejsca na kolektory i automatyki.",
       },
     ],
     match: ["solar", "kolektor", "słońc"],

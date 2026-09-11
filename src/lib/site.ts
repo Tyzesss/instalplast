@@ -2,8 +2,8 @@
 
 export const SITE_NAME = "Instal-Plast";
 export const SITE_TITLE =
-  "Instal-Plast — kotły, pompy ciepła, klimatyzacja | Zielona Góra";
-export const COMPANY_LEGAL_NAME = 'PUH „INSTAL-PLAST” – Serwis Maciej Głowacki';
+  "Instal-Plast - kotły, pompy ciepła, klimatyzacja | Zielona Góra";
+export const COMPANY_LEGAL_NAME = 'PUH „INSTAL-PLAST” - Serwis Maciej Głowacki';
 
 export const EMAIL = "instalplast@vp.pl";
 export const EMAIL_HREF = `mailto:${EMAIL}`;
@@ -63,19 +63,19 @@ export const SERVICE_COUNTIES = [
   "żarski",
 ] as const;
 
-/** Z katalogów — nie ma na starej stronie; TODO: potwierdzić z klientem. */
+/** Z katalogów - nie ma na starej stronie; TODO: potwierdzić z klientem. */
 export const NIP = "9291670447";
 export const REGON = "978013130";
 
-/** Serwis 24/7 wg starej strony; biuro z agregatorów Maps: Pn–Pt 7:00–16:00. */
-export const HOURS = "Pn-Pt: 7:00-16:00 · Serwis 24/7";
+/** Godziny z wizytówki Google Maps. */
+export const HOURS = "Pn-Pt: 7:00-16:00, Sb-Nd: zamknięte";
 
 export const GOOGLE_REVIEWS_URL = MAPS_URL;
-/** Orientacyjnie z agregatorów wizytówki (Orły / Maps) — ~4.7/5 przy ~10 opiniach. */
+/** Orientacyjnie z agregatorów wizytówki (Orły / Maps) - ~4.7/5 przy ~10 opiniach. */
 export const GOOGLE_RATING = "4.7";
 export const GOOGLE_REVIEW_COUNT = 10;
 
-/** Realizacje do podstron usług (match w services.ts). Poglądowe — do podmiany. */
+/** Realizacje do podstron usług (match w services.ts). Poglądowe - do podmiany. */
 export const REALIZATIONS = [
   {
     title: "Kotłownia gazowa kondensacyjna",

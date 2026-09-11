@@ -33,7 +33,7 @@ export function Hero() {
         <div className="relative size-full origin-[80%_65%] scale-[1.2] -translate-x-[1%] translate-y-[2%] max-md:origin-[80%_42%] max-md:scale-[1.2] max-md:translate-x-0 max-md:-translate-y-[10%] lg:scale-[1.18] lg:translate-x-[1%]">
           <motion.img
             src={heroImage}
-            alt="Nowoczesny dom z pompą ciepła o zmierzchu"
+            alt="Nowoczesny dom z pompą ciepła o zmierzchu - Instal-Plast"
             width={1280}
             height={720}
             initial={reduce ? false : { opacity: 0 }}
@@ -84,7 +84,7 @@ export function Hero() {
 
             <p className="mt-4 max-w-xl text-sm text-navy-foreground/75 sm:mt-5 sm:max-w-3xl sm:text-lg md:text-[1.2rem]">
               <span className="sm:whitespace-nowrap">
-                Instal-Plast — sprzedaż, montaż i&nbsp;serwis w&nbsp;Zielonej Górze.
+                Instal-Plast - sprzedaż, montaż i&nbsp;serwis.
               </span>
               <br /> {SERVICE_AREA}.
             </p>

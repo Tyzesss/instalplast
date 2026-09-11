@@ -11,7 +11,7 @@ Status: **rebrand wdrożony** (dane, 6 usług, kolory `#ed5a24`, logo, mapa lubu
 | # | Temat | Decyzja |
 | --- | --- | --- |
 | 1 | Adres na stronie | **Zielona Góra** — Wrocławska 28, 65-427 Zielona Góra |
-| 2 | Godziny / serwis | **Serwis 24/7** (dyżur) wg starej strony; godziny biura z Maps — TODO |
+| 2 | Godziny | Z Maps: **Pn–Pt 7:00–16:00, Sb–Nd zamknięte** |
 | 3 | Obszar | Zielona Góra + **województwo lubuskie** (lista miejscowości robocza) |
 | 4 | Kolor brandu | Accent **`#ed5a24`** (pomarańcz Instal-Plast) |
 | 5 | Opinie Google | **Bez wymyślonych cytatów** — CTA do wizytówki Maps |
@@ -39,7 +39,7 @@ Dodatkowo:
 | Telefon (kom.) | 603 930 929 (`+48603930929`) |
 | Telefon (stac.) | 68 453 32 82 (`+48684533282`) |
 | E-mail | instalplast@vp.pl |
-| Godziny | Serwis 24/7 (dyżur) |
+| Godziny | Pn–Pt 7:00–16:00, Sb–Nd zamknięte (Google Maps) |
 | Maps / opinie | https://maps.app.goo.gl/WdbqeorkJrh6iCYh6 |
 | Logo | `src/assets/logo-instal-plast.png` |
 | Stara strona | https://instal-plast.pl/ · https://instal-plast.eu/ |

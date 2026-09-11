@@ -7,8 +7,8 @@ export function WhatsAppIcon({ className }: { className?: string }) {
     <svg viewBox="0 0 24 24" className={className} aria-hidden>
       <defs>
         <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="oklch(0.7 0.12 238)" />
-          <stop offset="100%" stopColor="oklch(0.55 0.145 242)" />
+          <stop offset="0%" stopColor="oklch(0.72 0.16 40)" />
+          <stop offset="100%" stopColor="oklch(0.55 0.17 40)" />
         </linearGradient>
       </defs>
       <path

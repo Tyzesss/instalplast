@@ -1,20 +1,13 @@
 import { ExternalLink, Quote, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import { GOOGLE_REVIEWS_URL, GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@/lib/site";
+import { GOOGLE_REVIEWS_URL, GOOGLE_RATING } from "@/lib/site";
 
 /**
  * Publiczne cytaty o Instal-Plast (Zielona Góra).
- * Ocena ~4.7/5 (10) z agregatorów wizytówki Google (Orły Instalatorstwa).
- * Źródła tekstów: agregator opinii + Opineo (ta sama firma). Przycisk → Google Maps.
+ * Źródła: agregator opinii + Opineo. Przycisk → Google Maps.
  */
 const REVIEWS = [
-  {
-    name: "W. K.",
-    place: "Zielona Góra",
-    service: "Serwis",
-    text: "Profesjonalna obsługa",
-  },
   {
     name: "Klient biznesowy",
     place: "Zielona Góra",
@@ -82,18 +75,17 @@ export function Testimonials() {
             Opinie klientów
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
-            Zaufało nam ponad <span className="text-gradient-cyan">{GOOGLE_REVIEW_COUNT} klientów</span>
-            <br className="hidden sm:block" /> z Zielonej Góry
-            <br className="sm:hidden" />
-            <span className="hidden sm:inline"> </span>i okolic
+            Co mówią klienci
+            <br />
+            o <span className="text-gradient-cyan">współpracy z nami</span>
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg md:mx-auto">
-            Ocena {GOOGLE_RATING}/5 na Google. Profesjonalizm i rzetelna współpraca — to, co wraca w
+            Ocena {GOOGLE_RATING}/5 na Google. Profesjonalizm i rzetelna współpraca - to, co wraca w
             opiniach o Instal-Plast.
           </p>
         </Reveal>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3">
           {REVIEWS.map((review, i) => (
             <Reveal
               key={review.name + review.text.slice(0, 16)}

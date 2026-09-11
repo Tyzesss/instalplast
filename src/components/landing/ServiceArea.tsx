@@ -33,16 +33,16 @@ function AreaMap() {
         viewBox={LUBUSKIE_VIEWBOX}
         role="img"
         aria-label="Mapa województwa lubuskiego z zaznaczonymi miejscowościami"
-        className="mx-auto h-auto w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-none"
+        className="mx-auto h-auto w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[19rem]"
       >
         <motion.path
           ref={pathRef}
           d={LUBUSKIE_PATH}
           fill="oklch(0.68 0.17 40)"
           stroke="oklch(0.68 0.17 40)"
-          strokeWidth={2}
-          strokeLinejoin="round"
-          strokeLinecap="round"
+          strokeWidth={1.5}
+          strokeLinejoin="miter"
+          strokeLinecap="butt"
           strokeDasharray={pathLen || 1}
           initial={false}
           animate={
@@ -170,7 +170,7 @@ export function ServiceArea() {
   return (
     <section id="obszar" className="bg-muted pt-12 pb-8 sm:pt-24 sm:pb-20">
       <div className="mx-auto max-w-[1360px] px-5 lg:px-8">
-        <div className="grid items-start gap-8 lg:grid-cols-12 lg:items-center lg:gap-x-14 lg:gap-y-8">
+        <div className="grid items-start gap-8 lg:grid-cols-12 lg:items-center lg:gap-x-10 lg:gap-y-8">
           <Reveal delay={0.08} className="order-1 lg:col-span-7 lg:col-start-6 lg:row-start-1">
             <span className="font-display text-xs font-semibold tracking-[0.18em] text-gradient-cyan uppercase">
               Obszar działania
@@ -191,7 +191,7 @@ export function ServiceArea() {
             </p>
           </Reveal>
 
-          <div className="order-2 lg:col-span-5 lg:col-start-1 lg:row-span-2 lg:row-start-1">
+          <div className="order-2 flex justify-center lg:col-span-5 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:items-center">
             <AreaMap />
           </div>
 

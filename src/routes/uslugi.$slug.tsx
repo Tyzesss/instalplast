@@ -26,61 +26,64 @@ import { ServiceRealizations } from "@/components/landing/ServiceRealizations";
 import { Reveal } from "@/components/landing/Reveal";
 import { PHONE_DISPLAY, PHONE_HREF, SITE_NAME } from "@/lib/site";
 import { motion, useReducedMotion } from "framer-motion";
-import sidePompy from "@/assets/service-side-pompy-ciepla.png";
-import sideKotly from "@/assets/service-side-kotly-pelletowe.png";
-import sidePodlogowe from "@/assets/service-side-podlogowe.png";
-import sideKlima from "@/assets/service-side-klimatyzacja.png";
-import sideWoda from "@/assets/service-side-uzdatnianie.png";
-import faqBgPompy from "@/assets/faq-bg-pompy-ciepla.png";
-import faqBgKotly from "@/assets/faq-bg-kotly-pelletowe.png";
-import faqBgPodlogowe from "@/assets/faq-bg-ogrzewanie-podlogowe.png";
-import faqBgKlima from "@/assets/faq-bg-klimatyzacja.png";
-import faqBgUzdatnianie from "@/assets/faq-bg-uzdatnianie-wody.png";
-import heroPompy from "@/assets/service-hero-pompy-ciepla.png";
-import heroKotly from "@/assets/service-hero-kotly-pelletowe.png";
-import heroPodlogowe from "@/assets/service-hero-ogrzewanie-podlogowe.png";
-import heroKlima from "@/assets/service-hero-klimatyzacja.png";
-import heroUzdatnianie from "@/assets/service-hero-uzdatnianie-wody.png";
+import sidePompy from "@/assets/ip-service-side-pompy.png";
+import sideKotlyGaz from "@/assets/ip-service-side-kotly-gazowe.png";
+import sideKotlyBio from "@/assets/ip-service-side-kotly-biopaliwa.png";
+import sideKlima from "@/assets/ip-service-side-klima.png";
+import sideTermo from "@/assets/ip-service-side-termowizja.png";
+import sideSolary from "@/assets/ip-service-side-solary.png";
+import faqBgPompy from "@/assets/ip-faq-bg-pompy.png";
+import faqBgKotlyGaz from "@/assets/ip-faq-bg-kotly-gazowe.png";
+import faqBgKotlyBio from "@/assets/ip-faq-bg-kotly-biopaliwa.png";
+import faqBgKlima from "@/assets/ip-faq-bg-klima.png";
+import faqBgTermo from "@/assets/ip-faq-bg-termowizja.png";
+import faqBgSolary from "@/assets/ip-faq-bg-solary.png";
+import heroPompy from "@/assets/ip-service-hero-pompy.png";
+import heroKotlyGaz from "@/assets/ip-service-hero-kotly-gazowe.png";
+import heroKotlyBio from "@/assets/ip-service-hero-kotly-biopaliwa.png";
+import heroKlima from "@/assets/ip-service-hero-klima.png";
+import heroTermo from "@/assets/ip-service-hero-termowizja.png";
+import heroSolary from "@/assets/ip-service-hero-solary.png";
 
 const HERO_IMAGES: Record<string, { src: string; position?: string }> = {
-  "kotly-gazowe-olejowe": { src: heroKotly, position: "55% 40%" },
-  "pompy-ciepla": { src: heroPompy, position: "65% 45%" },
-  "klimatyzacja-wentylacja": { src: heroKlima, position: "70% 40%" },
-  "badania-termowizyjne": { src: heroUzdatnianie, position: "55% 45%" },
-  "kotly-biopaliwa": { src: heroKotly, position: "55% 40%" },
-  solary: { src: heroPodlogowe, position: "60% 45%" },
+  "kotly-gazowe-olejowe": { src: heroKotlyGaz, position: "55% 40%" },
+  "pompy-ciepla": { src: heroPompy, position: "55% 45%" },
+  "klimatyzacja-wentylacja": { src: heroKlima, position: "50% 40%" },
+  "badania-termowizyjne": { src: heroTermo, position: "45% 40%" },
+  "kotly-biopaliwa": { src: heroKotlyBio, position: "50% 42%" },
+  solary: { src: heroSolary, position: "50% 40%" },
 };
 
 const FAQ_BACKGROUNDS: Record<string, { src: string; alt: string; position?: string }> = {
   "kotly-gazowe-olejowe": {
-    src: faqBgKotly,
+    src: faqBgKotlyGaz,
     alt: "Kotłownia z kotłem gazowym",
     position: "55% 40%",
   },
   "pompy-ciepla": {
     src: faqBgPompy,
-    alt: "Pompa ciepła przy nowoczesnym domu o zmierzchu",
-    position: "70% 45%",
+    alt: "Pompa ciepła przy domu o zmierzchu",
+    position: "55% 45%",
   },
   "klimatyzacja-wentylacja": {
     src: faqBgKlima,
-    alt: "Klimatyzacja w nowoczesnym salonie",
-    position: "60% 35%",
+    alt: "Jednostki zewnętrzne klimatyzacji",
+    position: "50% 40%",
   },
   "badania-termowizyjne": {
-    src: faqBgUzdatnianie,
+    src: faqBgTermo,
     alt: "Badanie termowizyjne budynku",
     position: "50% 45%",
   },
   "kotly-biopaliwa": {
-    src: faqBgKotly,
+    src: faqBgKotlyBio,
     alt: "Kotłownia na biopaliwa",
-    position: "55% 40%",
+    position: "50% 42%",
   },
   solary: {
-    src: faqBgPodlogowe,
-    alt: "System solarny przy budynku",
-    position: "50% 55%",
+    src: faqBgSolary,
+    alt: "Kolektory słoneczne na dachu",
+    position: "50% 40%",
   },
 };
 
@@ -89,7 +92,7 @@ const IMAGES: Record<
   { src: string; alt: string; position: string; heroPosition?: string; heroZoom?: number }
 > = {
   "kotly-gazowe-olejowe": {
-    src: sideKotly,
+    src: sideKotlyGaz,
     alt: "Kotłownia z kotłem gazowym lub olejowym",
     position: "48% 42%",
   },
@@ -104,30 +107,30 @@ const IMAGES: Record<
     position: "50% 45%",
   },
   "badania-termowizyjne": {
-    src: sideWoda,
+    src: sideTermo,
     alt: "Badanie termowizyjne instalacji i budynku",
     position: "48% 40%",
   },
   "kotly-biopaliwa": {
-    src: sideKotly,
+    src: sideKotlyBio,
     alt: "Kocioł na biopaliwa w kotłowni",
     position: "48% 42%",
   },
   solary: {
-    src: sidePodlogowe,
-    alt: "System solarny do CWU",
-    position: "50% 55%",
+    src: sideSolary,
+    alt: "Kolektory słoneczne do CWU",
+    position: "50% 40%",
   },
 };
 
-/** Same generated shots as the right-side panel on service pages. */
+/** Same shots as the right-side panel on service pages. */
 const CARD_THUMBS: Record<string, { src: string; position: string }> = {
-  "kotly-gazowe-olejowe": { src: sideKotly, position: "48% 42%" },
+  "kotly-gazowe-olejowe": { src: sideKotlyGaz, position: "48% 42%" },
   "pompy-ciepla": { src: sidePompy, position: "50% 45%" },
   "klimatyzacja-wentylacja": { src: sideKlima, position: "50% 45%" },
-  "badania-termowizyjne": { src: sideWoda, position: "48% 40%" },
-  "kotly-biopaliwa": { src: sideKotly, position: "48% 42%" },
-  solary: { src: sidePodlogowe, position: "50% 55%" },
+  "badania-termowizyjne": { src: sideTermo, position: "48% 40%" },
+  "kotly-biopaliwa": { src: sideKotlyBio, position: "48% 42%" },
+  solary: { src: sideSolary, position: "50% 40%" },
 };
 
 function OtherServiceCard({ item }: { item: (typeof SERVICES)[number] }) {
@@ -467,7 +470,7 @@ function ServicePage() {
 
         <section className="relative isolate overflow-hidden bg-white pt-12 pb-8 text-center sm:py-16 lg:py-20">
           <div
-            className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[min(36rem,70%)] bg-[linear-gradient(180deg,transparent_0%,oklch(0.59_0.14_242/0.02)_30%,oklch(0.59_0.14_242/0.06)_60%,oklch(0.59_0.14_242/0.11)_100%)] max-md:h-[min(28rem,75%)] max-md:bg-[linear-gradient(180deg,transparent_0%,oklch(0.59_0.14_242/0.03)_28%,oklch(0.59_0.14_242/0.07)_58%,oklch(0.59_0.14_242/0.12)_100%)]"
+            className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[min(36rem,70%)] bg-[linear-gradient(180deg,transparent_0%,oklch(0.59_0.12_40/0.02)_30%,oklch(0.59_0.12_40/0.06)_60%,oklch(0.59_0.12_40/0.11)_100%)] max-md:h-[min(28rem,75%)] max-md:bg-[linear-gradient(180deg,transparent_0%,oklch(0.59_0.12_40/0.03)_28%,oklch(0.59_0.12_40/0.07)_58%,oklch(0.59_0.12_40/0.12)_100%)]"
             aria-hidden
           />
           <div className="relative z-10 mx-auto max-w-[1360px] px-5 lg:px-8">
@@ -485,9 +488,12 @@ function ServicePage() {
                 items={others}
                 renderItem={(item) => <OtherServiceCard item={item} />}
               />
-              <ul className="hidden gap-5 md:grid md:grid-cols-2 lg:grid-cols-4">
+              <ul className="hidden gap-5 md:flex md:flex-wrap md:justify-center">
                 {others.map((item, i) => (
-                  <li key={item.slug} className="min-w-0">
+                  <li
+                    key={item.slug}
+                    className="min-w-0 md:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)]"
+                  >
                     <Reveal delay={Math.min(i, 7) * 0.05} scale className="h-full">
                       <OtherServiceCard item={item} />
                     </Reveal>

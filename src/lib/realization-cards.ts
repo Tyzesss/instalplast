@@ -1,5 +1,6 @@
 import imgPompa from "@/assets/ip-realizacja-pompa.jpg";
 import imgKociol from "@/assets/ip-realizacja-kociol.jpg";
+import imgBio from "@/assets/ip-realizacja-bio.jpg";
 import imgKlima from "@/assets/ip-realizacja-klima.jpg";
 import imgTermo from "@/assets/ip-realizacja-termowizja.jpg";
 import imgSolary from "@/assets/ip-realizacja-solary.jpg";
@@ -16,6 +17,7 @@ export type RealizationCard = {
 const FOCUS: Record<string, string> = {
   [imgPompa]: "50% 45%",
   [imgKociol]: "50% 42%",
+  [imgBio]: "50% 45%",
   [imgKlima]: "50% 40%",
   [imgTermo]: "45% 40%",
   [imgSolary]: "50% 40%",
@@ -25,7 +27,7 @@ function withFocus(card: Omit<RealizationCard, "focus">): RealizationCard {
   return { ...card, focus: FOCUS[card.image] ?? "50% 42%" };
 }
 
-/** Poglądowe zdjęcia AI — do podmiany na materiały klienta. */
+/** Poglądowe zdjęcia AI - do podmiany na materiały klienta. */
 const BY_SERVICE: Record<string, Omit<RealizationCard, "focus">[]> = {
   "pompy-ciepla": [
     {
@@ -49,9 +51,9 @@ const BY_SERVICE: Record<string, Omit<RealizationCard, "focus">[]> = {
     {
       title: "Kotłownia na biopaliwa",
       year: "2025",
-      scope: "Montaż kotła w pomieszczeniu technicznym.",
-      image: imgKociol,
-      alt: "Kotłownia po montażu",
+      scope: "Kocioł na pellet z zasobnikiem.",
+      image: imgBio,
+      alt: "Kotłownia na biopaliwa po montażu",
     },
   ],
   "klimatyzacja-wentylacja": [

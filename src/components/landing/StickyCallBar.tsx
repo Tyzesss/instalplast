@@ -51,7 +51,7 @@ export function StickyCallBar() {
             </a>
             <a
               href={PHONE_HREF}
-              className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-cyan px-4 py-3 text-sm font-semibold text-white shadow-[0_6px_20px_oklch(0.70_0.14_220_/_0.18)] transition-transform duration-300 hover:scale-[1.015] active:scale-[0.98]"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-cyan px-4 py-3 text-sm font-semibold text-white shadow-[0_6px_20px_oklch(0.65_0.16_40_/_0.18)] transition-transform duration-300 hover:scale-[1.015] active:scale-[0.98]"
             >
               <Phone className="size-4" />
               Zadzwoń teraz
