@@ -33,7 +33,7 @@ function AreaMap() {
         viewBox={LUBUSKIE_VIEWBOX}
         role="img"
         aria-label="Mapa województwa lubuskiego z zaznaczonymi miejscowościami"
-        className="mx-auto h-auto w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[19rem]"
+        className="mx-auto h-auto w-full max-w-[19rem] sm:max-w-[22rem] lg:max-w-[24rem]"
       >
         <motion.path
           ref={pathRef}

@@ -50,7 +50,7 @@ export function About() {
             <figure className="relative h-[22rem] overflow-hidden rounded-2xl sm:h-[26rem] lg:h-[30rem]">
               <img
                 src={aboutImage}
-                alt="Dom z pompą ciepła i kolektorami - Instal-Plast"
+                alt="Pompa ciepła przy domu - Instal-Plast"
                 width={1024}
                 height={1365}
                 className="absolute inset-0 size-full object-cover object-[72%_45%] [filter:brightness(0.97)_contrast(1.04)_saturate(0.96)]"

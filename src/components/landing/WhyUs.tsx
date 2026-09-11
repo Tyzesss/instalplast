@@ -31,7 +31,7 @@ export function WhyUs() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src={whyUsImage}
-          alt="Nowoczesny dom z pompą ciepła o zmierzchu"
+          alt="Profesjonalna instalacja gazowa - Instal-Plast"
           width={1536}
           height={864}
           className="size-full object-cover object-[62%_52%]"

@@ -33,7 +33,7 @@ export function Hero() {
         <div className="relative size-full origin-[80%_65%] scale-[1.2] -translate-x-[1%] translate-y-[2%] max-md:origin-[80%_42%] max-md:scale-[1.2] max-md:translate-x-0 max-md:-translate-y-[10%] lg:scale-[1.18] lg:translate-x-[1%]">
           <motion.img
             src={heroImage}
-            alt="Nowoczesny dom z pompą ciepła o zmierzchu - Instal-Plast"
+            alt="Pompa ciepła przy nowoczesnym domu - Instal-Plast"
             width={1280}
             height={720}
             initial={reduce ? false : { opacity: 0 }}
@@ -75,7 +75,12 @@ export function Hero() {
             </span>
 
             <h1 className="mt-4 font-display text-[clamp(2.7rem,7.8vw+0.55rem,3.5rem)] leading-[1.05] font-extrabold tracking-tight text-navy-foreground sm:mt-5 sm:text-7xl sm:tracking-normal lg:text-[5rem]">
-              <span className="sm:whitespace-nowrap">Kotły, pompy ciepła</span>
+              <span className="sm:whitespace-nowrap">
+                Kotły,
+                <br className="sm:hidden" />
+                <span className="hidden sm:inline"> </span>
+                pompy ciepła
+              </span>
               <br />
               <span className="text-gradient-cyan sm:whitespace-nowrap">
                 i&nbsp;klimatyzacja.
