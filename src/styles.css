@@ -1,0 +1,488 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * AJM Technika design system - premium HVAC.
+ * Brand blue from logo AJM: #0784C7 → oklch(0.59 0.14 242).
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-navy-soft: var(--navy-soft);
+  --color-cyan: var(--cyan);
+  --color-cyan-foreground: var(--cyan-foreground);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Cool light surfaces */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.24 0.04 242);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.04 242);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.04 242);
+
+  --primary: oklch(0.28 0.055 242);
+  --primary-foreground: oklch(0.985 0.006 242);
+
+  --secondary: oklch(0.955 0.012 242);
+  --secondary-foreground: oklch(0.28 0.055 242);
+
+  --muted: oklch(0.955 0.012 242);
+  --muted-foreground: oklch(0.5 0.028 242);
+
+  /* Logo AJM blue #0784C7 */
+  --accent: #0784c7;
+  --accent-foreground: oklch(0.985 0.01 242);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0.006 242);
+
+  --border: oklch(0.91 0.014 242);
+  --input: oklch(0.91 0.014 242);
+  --ring: #0784c7;
+
+  /* Deep navy in the same blue family as the logo */
+  --navy: oklch(0.155 0.045 242);
+  --navy-soft: oklch(0.22 0.05 242);
+  --navy-foreground: oklch(0.97 0.01 242);
+  --cyan: #0784c7;
+  --cyan-foreground: oklch(0.2 0.05 242);
+
+  --chart-1: oklch(0.66 0.13 240);
+  --chart-2: oklch(0.59 0.14 242);
+  --chart-3: oklch(0.42 0.07 242);
+  --chart-4: oklch(0.78 0.08 242);
+  --chart-5: oklch(0.55 0.12 245);
+
+  --sidebar: oklch(0.985 0.007 242);
+  --sidebar-foreground: oklch(0.24 0.04 242);
+  --sidebar-primary: oklch(0.28 0.055 242);
+  --sidebar-primary-foreground: oklch(0.985 0.006 242);
+  --sidebar-accent: oklch(0.955 0.012 242);
+  --sidebar-accent-foreground: oklch(0.28 0.055 242);
+  --sidebar-border: oklch(0.91 0.014 242);
+  --sidebar-ring: oklch(0.59 0.14 242);
+
+  /* Gradients - same --navy as navbar, hero, footer, and dark sections */
+  --gradient-hero: linear-gradient(
+    180deg,
+    oklch(from var(--navy) l c h / 0.94) 0%,
+    oklch(from var(--navy) l c h / 0.82) 10%,
+    oklch(from var(--navy) l c h / 0.7) 45%,
+    oklch(from var(--navy) l c h / 0.94) 100%
+  );
+  --gradient-service-hero: linear-gradient(
+    180deg,
+    oklch(0 0 0 / 0.55) 0%,
+    oklch(0 0 0 / 0.48) 42%,
+    oklch(0 0 0 / 0.66) 100%
+  );
+  --gradient-service-hero-side: linear-gradient(
+    90deg,
+    oklch(0 0 0 / 0.28) 0%,
+    oklch(0 0 0 / 0.14) 48%,
+    oklch(0 0 0 / 0.06) 100%
+  );
+  --gradient-cyan: #0784c7;
+  --gradient-navy-from: var(--navy);
+  --gradient-navy-to: var(--navy);
+  --gradient-navy: var(--navy);
+  --gradient-soft: linear-gradient(180deg, oklch(0.985 0.007 242) 0%, oklch(0.945 0.018 240) 100%);
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px oklch(0.155 0.045 242 / 0.06), 0 12px 32px oklch(0.155 0.045 242 / 0.1);
+  --shadow-lift: 0 2px 6px oklch(0.155 0.045 242 / 0.09), 0 24px 56px oklch(0.155 0.045 242 / 0.18);
+  --shadow-glow: 0 12px 40px oklch(0.55 0.12 242 / 0.28);
+
+  /* Glass */
+  --glass-bg: oklch(1 0 0 / 0.14);
+  --glass-border: oklch(1 0 0 / 0.16);
+}
+
+.dark {
+  --background: oklch(0.18 0.04 242);
+  --foreground: oklch(0.97 0.01 242);
+  --card: oklch(0.24 0.05 242);
+  --card-foreground: oklch(0.97 0.01 242);
+  --popover: oklch(0.24 0.05 242);
+  --popover-foreground: oklch(0.97 0.01 242);
+  --primary: oklch(0.66 0.13 240);
+  --primary-foreground: oklch(0.18 0.05 242);
+  --secondary: oklch(0.28 0.045 242);
+  --secondary-foreground: oklch(0.97 0.01 242);
+  --muted: oklch(0.28 0.045 242);
+  --muted-foreground: oklch(0.72 0.03 242);
+  --accent: #0784c7;
+  --accent-foreground: oklch(0.18 0.05 242);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.66 0.13 240);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-padding-top: 0;
+    min-height: 100%;
+    background-color: var(--navy);
+    overflow-x: clip;
+  }
+
+  body {
+    min-height: 100%;
+    background-color: var(--navy);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  /*
+   * iOS 26+ Safari ignores theme-color. It tints Liquid Glass from
+   * fixed/sticky edge backgrounds (including opacity:0 overlays) then body.
+   * Bottom bleed sits fully below the visual viewport so navy paints
+   * behind the URL bar without a hairline in the page - also after scroll.
+   */
+  .safari-toolbar-tint {
+    display: none;
+    pointer-events: none;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    @media (width < 768px) {
+      .safari-toolbar-tint {
+        display: block;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        background-color: var(--navy);
+      }
+
+      .safari-toolbar-tint-top {
+        top: 0;
+        z-index: 60;
+        height: max(12px, env(safe-area-inset-top, 0px));
+      }
+
+      .safari-toolbar-tint-bottom {
+        top: 100%;
+        bottom: auto;
+        z-index: 1;
+        height: max(136px, calc(env(safe-area-inset-bottom, 0px) + 100px));
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  section[id],
+  #kontakt-formularz {
+    scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 5.5rem);
+  }
+}
+
+@utility glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+
+@utility bg-gradient-cyan {
+  background-color: var(--accent);
+  background-image: none;
+}
+
+@utility bg-gradient-navy {
+  background-color: var(--navy);
+  background-image: none;
+}
+
+@utility bg-gradient-soft {
+  background-image: var(--gradient-soft);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility text-gradient-cyan {
+  background-image: none;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  color: var(--accent);
+  -webkit-text-fill-color: unset;
+}
+
+@utility section-padding {
+  padding-block: 5rem;
+}
+
+/* Brands - seamless marquee (mobile) */
+.partners-marquee {
+  position: relative;
+  overflow: hidden;
+  padding-block: 0.5rem;
+}
+
+.partners-marquee__track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 2.5rem;
+  padding-inline-end: 2.5rem;
+  animation: partners-marquee-scroll 45s linear infinite;
+}
+
+.partners-marquee__track:hover {
+  animation-play-state: paused;
+}
+
+.partners-marquee__item {
+  flex: none;
+  font-size: clamp(1.25rem, 5.5vw, 1.75rem);
+  line-height: 1;
+  white-space: nowrap;
+  color: oklch(0.55 0.02 242);
+  opacity: 0.75;
+  user-select: none;
+  transition:
+    color 0.45s ease,
+    opacity 0.45s ease;
+}
+
+.partners-marquee--on-hero .partners-marquee__item,
+.partners-marquee--on-navy .partners-marquee__item {
+  color: oklch(0.985 0.004 242);
+  opacity: 0.6;
+}
+
+.partners-marquee__item:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.partners-marquee--on-hero .partners-marquee__item:hover,
+.partners-marquee--on-navy .partners-marquee__item:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* Brand wordmarks - public font approximations of each mark’s character */
+.brand-wordmark {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.brand-wordmark--midea {
+  font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.brand-wordmark--defro {
+  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-wordmark--panasonic {
+  font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.brand-wordmark--lg {
+  font-family: "Archivo Black", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.brand-wordmark--daikin {
+  font-family: "Exo 2", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.brand-wordmark--vaillant {
+  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.brand-wordmark--mitsubishi {
+  font-family: Oswald, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-wordmark--bosch {
+  font-family: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-wordmark--stiebel {
+  font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.brand-wordmark--rotenso {
+  font-family: "Exo 2", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brand-wordmark--lazar {
+  font-family: Poppins, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.brand-wordmark--galmet {
+  font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.partners-marquee__fade {
+  pointer-events: none;
+  position: absolute;
+  inset-block: 0;
+  z-index: 1;
+  width: clamp(2rem, 14vw, 4.5rem);
+}
+
+.partners-marquee__fade--left {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.partners-marquee__fade--right {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+.partners-marquee--on-hero .partners-marquee__fade--left {
+  background: linear-gradient(to right, oklch(from var(--navy) l c h / 0.94), transparent);
+}
+
+.partners-marquee--on-hero .partners-marquee__fade--right {
+  background: linear-gradient(to left, oklch(from var(--navy) l c h / 0.94), transparent);
+}
+
+.partners-marquee--on-navy .partners-marquee__fade--left {
+  background: linear-gradient(to right, var(--navy), transparent);
+}
+
+.partners-marquee--on-navy .partners-marquee__fade--right {
+  background: linear-gradient(to left, var(--navy), transparent);
+}
+
+@keyframes partners-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .partners-marquee__track {
+    animation: none;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .partners-marquee__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .motion-safe-only {
+    animation: none !important;
+    transition: none !important;
+  }
+}
