@@ -11,19 +11,19 @@ const REVIEWS = [
   {
     name: "Klient biznesowy",
     place: "Zielona Góra",
-    service: "Realizacja",
+    service: "Montaż",
     text: "Firma wykazała się dobrą organizacją i profesjonalizmem załogi i jest godna polecenia przy realizacji kolejnych zleceń.",
   },
   {
     name: "Partner",
     place: "Lubuskie",
-    service: "Współpraca",
+    service: "Pompa ciepła",
     text: "Rzetelny partner, wszystkie sprawy załatwiane na bieżąco i bezproblemowo.",
   },
   {
     name: "Partner-TG",
     place: "Lubuskie",
-    service: "Współpraca",
+    service: "Ogrzewanie",
     text: "Polecamy firmę jako fachowego i kompetentnego partnera we współpracy biznesowej.",
   },
 ];
