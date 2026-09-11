@@ -26,24 +26,24 @@ import { ServiceRealizations } from "@/components/landing/ServiceRealizations";
 import { Reveal } from "@/components/landing/Reveal";
 import { PHONE_DISPLAY, PHONE_HREF, SITE_NAME } from "@/lib/site";
 import { motion, useReducedMotion } from "framer-motion";
-import sidePompy from "@/assets/ip-service-side-pompy.png";
-import sideKotlyGaz from "@/assets/ip-service-side-kotly-gazowe.png";
-import sideKotlyBio from "@/assets/ip-service-side-kotly-biopaliwa.png";
-import sideKlima from "@/assets/ip-service-side-klima.png";
-import sideTermo from "@/assets/ip-service-side-termowizja.png";
-import sideSolary from "@/assets/ip-service-side-solary.png";
-import faqBgPompy from "@/assets/ip-faq-bg-pompy.png";
-import faqBgKotlyGaz from "@/assets/ip-faq-bg-kotly-gazowe.png";
-import faqBgKotlyBio from "@/assets/ip-faq-bg-kotly-biopaliwa.png";
-import faqBgKlima from "@/assets/ip-faq-bg-klima.png";
-import faqBgTermo from "@/assets/ip-faq-bg-termowizja.png";
-import faqBgSolary from "@/assets/ip-faq-bg-solary.png";
-import heroPompy from "@/assets/ip-service-hero-pompy.png";
-import heroKotlyGaz from "@/assets/ip-service-hero-kotly-gazowe.png";
-import heroKotlyBio from "@/assets/ip-service-hero-kotly-biopaliwa.png";
-import heroKlima from "@/assets/ip-service-hero-klima.png";
-import heroTermo from "@/assets/ip-service-hero-termowizja.png";
-import heroSolary from "@/assets/ip-service-hero-solary.png";
+import sidePompy from "@/assets/ip-service-side-pompy.jpg";
+import sideKotlyGaz from "@/assets/ip-service-side-kotly-gazowe.jpg";
+import sideKotlyBio from "@/assets/ip-service-side-kotly-biopaliwa.jpg";
+import sideKlima from "@/assets/ip-service-side-klima.jpg";
+import sideTermo from "@/assets/ip-service-side-termowizja.jpg";
+import sideSolary from "@/assets/ip-service-side-solary.jpg";
+import faqBgPompy from "@/assets/ip-faq-bg-pompy.jpg";
+import faqBgKotlyGaz from "@/assets/ip-faq-bg-kotly-gazowe.jpg";
+import faqBgKotlyBio from "@/assets/ip-faq-bg-kotly-biopaliwa.jpg";
+import faqBgKlima from "@/assets/ip-faq-bg-klima.jpg";
+import faqBgTermo from "@/assets/ip-faq-bg-termowizja.jpg";
+import faqBgSolary from "@/assets/ip-faq-bg-solary.jpg";
+import heroPompy from "@/assets/ip-service-hero-pompy.jpg";
+import heroKotlyGaz from "@/assets/ip-service-hero-kotly-gazowe.jpg";
+import heroKotlyBio from "@/assets/ip-service-hero-kotly-biopaliwa.jpg";
+import heroKlima from "@/assets/ip-service-hero-klima.jpg";
+import heroTermo from "@/assets/ip-service-hero-termowizja.jpg";
+import heroSolary from "@/assets/ip-service-hero-solary.jpg";
 
 const HERO_IMAGES: Record<string, { src: string; position?: string }> = {
   "kotly-gazowe-olejowe": { src: heroKotlyGaz, position: "55% 40%" },
@@ -147,6 +147,8 @@ function OtherServiceCard({ item }: { item: (typeof SERVICES)[number] }) {
         <img
           src={thumb.src}
           alt=""
+          loading="lazy"
+          decoding="async"
           className="aspect-[16/10] w-full object-cover md:transition-transform md:duration-500 md:group-hover:scale-[1.03]"
           style={{ objectPosition: thumb.position }}
         />
@@ -203,6 +205,8 @@ function ServiceFaq({ service }: { service: Service }) {
             alt=""
             width={1536}
             height={864}
+            loading="lazy"
+            decoding="async"
             className="size-full object-cover"
             style={{ objectPosition: faqBg.position ?? "50% 45%" }}
           />
@@ -316,6 +320,8 @@ function ServicePage() {
               <motion.img
                 src={hero.src}
                 alt=""
+                fetchPriority="high"
+                decoding="async"
                 initial={reduce ? false : { opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: reduce ? 0 : 1.05, ease }}
@@ -425,6 +431,8 @@ function ServicePage() {
                   <img
                     src={media.src}
                     alt={media.alt}
+                    loading="lazy"
+                    decoding="async"
                     className="relative h-56 w-full rounded-3xl object-cover shadow-card ring-2 ring-accent/35 sm:h-72 lg:h-full lg:min-h-[18rem]"
                     style={{ objectPosition: media.position }}
                   />

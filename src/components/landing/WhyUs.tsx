@@ -1,6 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import { BadgeCheck, ClipboardCheck, MapPinned } from "lucide-react";
-import whyUsImage from "@/assets/why-us-hvac.png";
+import whyUsImage from "@/assets/why-us-hvac.jpg";
 import { DarkEyebrow } from "./DarkEyebrow";
 import { Reveal } from "./Reveal";
 
@@ -34,6 +34,8 @@ export function WhyUs() {
           alt="Profesjonalna instalacja gazowa - Instal-Plast"
           width={1536}
           height={864}
+          loading="lazy"
+          decoding="async"
           className="size-full object-cover object-[62%_52%]"
         />
       </div>

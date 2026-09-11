@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/lib/scroll-to-section";
 import { PHONE_HREF, SERVICE_AREA } from "@/lib/site";
 import { Counter } from "./Counter";
-import heroImage from "@/assets/hero-hvac.png";
-import heroRightFill from "@/assets/hero-hvac-right.png";
+import heroImage from "@/assets/hero-hvac.jpg";
+import heroRightFill from "@/assets/hero-hvac-right.jpg";
 import { SERVICES } from "@/lib/services";
 
 const STATS = [
@@ -36,6 +36,8 @@ export function Hero() {
             alt="Pompa ciepła przy nowoczesnym domu - Instal-Plast"
             width={1280}
             height={720}
+            fetchPriority="high"
+            decoding="async"
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: reduce ? 0 : 1.1, ease: [0.22, 1, 0.36, 1] }}
@@ -50,6 +52,7 @@ export function Hero() {
               alt=""
               width={276}
               height={720}
+              decoding="async"
               className="size-full object-cover object-left"
             />
           </div>

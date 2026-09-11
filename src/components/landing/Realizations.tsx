@@ -107,6 +107,8 @@ function ProjectCard({
       <img
         src={project.image}
         alt={project.alt}
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
         style={{
           objectPosition: project.focus,

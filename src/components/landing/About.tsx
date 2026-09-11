@@ -53,6 +53,8 @@ export function About() {
                 alt="Pompa ciepła przy domu - Instal-Plast"
                 width={1024}
                 height={1365}
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 size-full object-cover object-[72%_45%] [filter:brightness(0.97)_contrast(1.04)_saturate(0.96)]"
               />
               <div
