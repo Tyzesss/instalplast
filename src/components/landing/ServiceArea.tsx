@@ -32,14 +32,14 @@ function AreaMap() {
       <svg
         viewBox={OPOLSKIE_VIEWBOX}
         role="img"
-        aria-label="Mapa województwa opolskiego z zaznaczonymi miejscowościami"
+        aria-label="Mapa obszaru działania — Zielona Góra i województwo lubuskie (kontur SVG tymczasowy)"
         className="mx-auto h-auto w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-none"
       >
         <motion.path
           ref={pathRef}
           d={OPOLSKIE_PATH}
-          fill="oklch(0.59 0.14 242)"
-          stroke="oklch(0.59 0.14 242)"
+          fill="oklch(0.68 0.17 40)"
+          stroke="oklch(0.68 0.17 40)"
           strokeWidth={2}
           strokeLinejoin="round"
           strokeLinecap="round"
@@ -176,13 +176,13 @@ export function ServiceArea() {
               Obszar działania
             </span>
             <h2 className="mt-5 font-display text-3xl font-bold sm:text-4xl lg:text-5xl">
-              Namysłów, Opole
+              Zielona Góra
               <br className="sm:hidden" />
               <span className="hidden sm:inline"> </span>
-              <span className="text-gradient-cyan">i okolice</span>
+              <span className="text-gradient-cyan">i lubuskie</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Działamy głównie w województwie opolskim. Lista miejscowości jest robocza i może się
+              Działamy głównie w województwie lubuskim. Lista miejscowości jest robocza i może się
               zmieniać.
             </p>
             <p className="mt-3 flex items-start gap-2 text-sm text-muted-foreground">

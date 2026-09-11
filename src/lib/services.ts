@@ -26,7 +26,7 @@ export const SERVICE_PROCESS = [
   {
     step: "01",
     title: "Oględziny i konsultacja",
-    body: "Oglądamy budynek, ustalamy potrzeby i kierunek - bez zobowiązań.",
+    body: "Oglądamy budynek, ustalamy potrzeby i kierunek — bez zobowiązań.",
   },
   {
     step: "02",
@@ -41,7 +41,7 @@ export const SERVICE_PROCESS = [
   {
     step: "04",
     title: "Serwis",
-    body: "Przeglądy, regulacja i wsparcie po oddaniu instalacji.",
+    body: "Przeglądy, regulacja i wsparcie po oddaniu instalacji — także dyżur 24/7.",
   },
 ] as const;
 
@@ -49,92 +49,48 @@ export type MountStep = { step: string; title: string; body: string };
 
 /** Kroki montażu na podstronach bez galerii realizacji. */
 export const SERVICE_MOUNT_STEPS: Record<string, MountStep[]> = {
-  "instalacje-wodne": [
+  "badania-termowizyjne": [
+    {
+      step: "01",
+      title: "Ustalenie zakresu",
+      body: "Cel badania: budynek, instalacja czy lokalizacja strat ciepła.",
+    },
+    {
+      step: "02",
+      title: "Pomiar kamerą Flir",
+      body: "Termogramy w warunkach umożliwiających wiarygodny odczyt.",
+    },
+    {
+      step: "03",
+      title: "Analiza",
+      body: "Wskazanie mostków cieplnych, braków izolacji i anomalii.",
+    },
+    {
+      step: "04",
+      title: "Rekomendacje",
+      body: "Konkretne wnioski i propozycja dalszych prac naprawczych.",
+    },
+  ],
+  solary: [
     {
       step: "01",
       title: "Oględziny i dobór",
-      body: "Punkt przyłącza, ciśnienie, układ pomieszczeń i dobór przekrojów pod zużycie.",
+      body: "Nasłonecznienie, dach / grunt, zapotrzebowanie na CWU.",
     },
     {
       step: "02",
-      title: "Trasa instalacji",
-      body: "Planujemy przebieg rur tak, by był szczelny, dostępny i gotowy pod zabudowę.",
+      title: "Projekt układu",
+      body: "Kolektory, zasobnik, automatyka i integracja z istniejącym źródłem ciepła.",
     },
     {
       step: "03",
       title: "Montaż",
-      body: "Przyłącza, rozprowadzenie wody użytkowej, armatura i przygotowanie pod wykończenie.",
+      body: "Mocowanie kolektorów, instalacja hydrauliczna i uruchomienie.",
     },
     {
       step: "04",
-      title: "Próby i odbiór",
-      body: "Próba ciśnieniowa, uruchomienie, instrukcja i przekazanie gotowej instalacji.",
-    },
-  ],
-  "instalacje-sanitarne": [
-    {
-      step: "01",
-      title: "Oględziny i dobór",
-      body: "Piony, odpływy, dostęp do instalacji oraz miejsca pod armaturę w budynku.",
-    },
-    {
-      step: "02",
-      title: "Trasa instalacji",
-      body: "Podejścia, spadki i przebieg kanalizacji pod konkretny układ łazienki.",
-    },
-    {
-      step: "03",
-      title: "Montaż",
-      body: "Kanalizacja, podejścia, piony i przygotowanie instalacji pod dalsze prace.",
-    },
-    {
-      step: "04",
-      title: "Próby i odbiór",
-      body: "Kontrola szczelności przed zabudową i przekazanie pod wykończenie.",
-    },
-  ],
-  "instalacje-przemyslowe": [
-    {
-      step: "01",
-      title: "Analiza obiektu",
-      body: "Oględziny, ciągłość pracy, zakres instalacji i wymagania techniczne obiektu.",
-    },
-    {
-      step: "02",
-      title: "Wycena i plan",
-      body: "Kosztorys, harmonogram i kolejność prac dopasowane do działania firmy.",
-    },
-    {
-      step: "03",
-      title: "Montaż",
-      body: "Realizacja uzgodnionego zakresu na obiekcie, bez zbędnych przestojów.",
-    },
-    {
-      step: "04",
-      title: "Uruchomienie i serwis",
-      body: "Pomiary, odbiór techniczny oraz ustalenia przeglądów i wsparcia po oddaniu.",
-    },
-  ],
-  rekuperacja: [
-    {
-      step: "01",
-      title: "Oględziny i dobór",
-      body: "Centrala, nawiewniki i wydajność dobrane do budynku oraz potrzeb mieszkańców.",
-    },
-    {
-      step: "02",
-      title: "Trasa kanałów",
-      body: "Estetyczne i skuteczne prowadzenie instalacji, z myślą o izolacji i serwisie.",
-    },
-    {
-      step: "03",
-      title: "Montaż",
-      body: "Centrala, kanały, anemostaty, izolacja i przygotowanie pod regulację.",
-    },
-    {
-      step: "04",
-      title: "Regulacja i instruktaż",
-      body: "Bilans nawiewu z wywiewem, obsługa systemu, filtry i zasady eksploatacji.",
+      title: "Instruktaż",
+      body: "Obsługa, sezonowa konserwacja i zasady bezpiecznej eksploatacji.",
     },
   ],
 };
@@ -143,382 +99,298 @@ const AREA_DEFAULT = `Działamy w ${SERVICE_AREA}. Dojazd poza listę miejscowo�
 
 export const SERVICES: Service[] = [
   {
+    slug: "kotly-gazowe-olejowe",
+    title: "Kotły gazowe i olejowe",
+    titleOf: "kotłów gazowych i olejowych",
+    headline: "Kotły gazowe i olejowe w Zielonej Górze",
+    seoTitle: "Kotły gazowe i olejowe Zielona Góra | montaż | Instal-Plast",
+    seoDescription:
+      "Sprzedaż i montaż kotłów gazowych oraz olejowych (kondensacyjne, niskotemperaturowe) w Zielonej Górze i na Lubuskiem. Viessmann, Brötje, De Dietrich i inne.",
+    short: "Kotły gazowe i olejowe: dobór mocy, montaż i uruchomienie kotłowni.",
+    intro:
+      "Sprzedaż i montaż kotłów gazowych oraz olejowych — kondensacyjnych i niskotemperaturowych. Dobór mocy, montaż i uruchomienie z instruktażem.",
+    area: AREA_DEFAULT,
+    sections: [
+      {
+        heading: "Sprawdzone kotły, jasny montaż",
+        body: "Dobieramy kocioł do budynku i instalacji c.o. Pracujemy m.in. na urządzeniach Viessmann, Brötje i De Dietrich. Kompaktowe kotły kondensacyjne łączą wysoką sprawność z wygodą użytkowania.",
+      },
+      {
+        heading: "Od wyceny do protokołu",
+        body: "Po oględzinach przygotowujemy wycenę, montujemy urządzenie, uruchamiamy je i zostawiamy jasną instrukcję obsługi. Możliwy późniejszy serwis i przeglądy.",
+      },
+    ],
+    bullets: [
+      "Dobór mocy do strat ciepła budynku",
+      "Kotły gazowe i olejowe (kondensacyjne / niskotemperaturowe)",
+      "Integracja z c.o. i CWU",
+      "Uruchomienie z pomiarami i instruktażem",
+      "Dokumentacja i protokół",
+      "Serwis gwarancyjny i pogwarancyjny",
+    ],
+    faq: [
+      {
+        q: "Gaz czy olej — co wybrać?",
+        a: "Zależy od przyłącza gazu, kosztów paliwa i układu kotłowni. Porównujemy warianty na oględzinach.",
+      },
+      {
+        q: "Czy montujecie kotły kondensacyjne?",
+        a: "Tak — to standard w naszej ofercie gazowej, przy odpowiednim odprowadzeniu kondensatu i spalin.",
+      },
+    ],
+    match: ["kotł", "gazow", "olejow", "kondensacyj"],
+  },
+  {
     slug: "pompy-ciepla",
     title: "Pompy ciepła",
     titleOf: "pomp ciepła",
-    headline: "Pompy ciepła w Namysłowie i Opolu",
-    seoTitle: "Pompy ciepła Namysłów i Opole | montaż | AJM Technika",
+    headline: "Pompy ciepła w Zielonej Górze i na Lubuskiem",
+    seoTitle: "Pompy ciepła Zielona Góra | montaż | Instal-Plast",
     seoDescription:
-      "Montaż pomp ciepła powietrze-woda w Namysłowie, Opolu i okolicach. Dobór mocy, uruchomienie i serwis. Bezpłatna konsultacja i wycena.",
-    short: "Dobór i montaż pomp powietrze-woda: ogrzewanie, chłodzenie i ciepła woda.",
+      "Sprzedaż i montaż pomp ciepła w Zielonej Górze i województwie lubuskim. Dobór mocy, uruchomienie i serwis. Bezpłatna konsultacja.",
+    short: "Dobór i montaż pomp ciepła: ogrzewanie, chłodzenie i ciepła woda.",
     intro:
-      "Dobór i montaż pomp powietrze-woda dla domów i budynków użytkowych. Niższe koszty ogrzewania, chłodzenie i CWU w jednym systemie, z uruchomieniem i instruktażem.",
+      "Sprzedaż i montaż pomp ciepła dla domów i obiektów. Niższe koszty ogrzewania, komfort przez cały rok — z uruchomieniem i instruktażem.",
     area: AREA_DEFAULT,
     sections: [
       {
-        heading: "Dlaczego warto wybrać pompę ciepła",
-        body: "Jedna instalacja ogrzewa zimą i często chłodzi latem. Niższe koszty eksploatacji niż przy wielu tradycyjnych źródłach ciepła, stabilny komfort i dobre sparowanie z podłogówką. Moc liczymy do konkretnego budynku, nie na oko z metrażu.",
-      },
-      {
-        heading: "Technologie, marki i montaż",
-        body: "Dobieramy jednostkę zewnętrzną i hydrobox, prowadzimy instalację i automatykę, ustawiamy krzywe grzania. Pracujemy na sprawdzonych urządzeniach (m.in. Midea). Po rozruchu zostajesz z jasną instrukcją i opieką serwisową.",
-      },
-    ],
-    bullets: [
-      "Obliczenie mocy do strat ciepła budynku",
-      "Jednostka zewnętrzna + hydrobox / bufor",
-      "Podłączenie do c.o., podłogówki i CWU",
-      "Krzywa grzania i ustawienia automatyki",
-      "Uruchomienie z protokołem i instruktażem",
-      "Przeglądy sezonowe i wsparcie serwisowe",
-    ],
-    faq: [
-      {
-        q: "Czy pompa ciepła ma sens w starszym domu?",
-        a: "Często tak, po sprawdzeniu izolacji, grzejników i rozprowadzenia. Czasem doradzamy dopracowanie instalacji albo inne źródło ciepła. Decyzja po oględzinach, nie z katalogu.",
-      },
-      {
-        q: "Jak głośna jest jednostka zewnętrzna?",
-        a: "Nowoczesne pompy są znacznie cichsze niż starsze generacje. Lokalizację dobieramy tak, by nie przeszkadzać domownikom i sąsiadom. Omawiamy to na miejscu.",
-      },
-    ],
-    match: ["pomp", "pompa ciepła", "hydrobox"],
-  },
-  {
-    slug: "kotly-pelletowe",
-    title: "Kotły pelletowe",
-    titleOf: "kotłów pelletowych",
-    headline: "Kotły pelletowe w Namysłowie i na Opolszczyźnie",
-    seoTitle: "Kotły pelletowe Namysłów | montaż kotła na pellet Opole | AJM Technika",
-    seoDescription:
-      "Montaż kotłów na pellet w Namysłowie i Opolu. Dobór mocy, zbiornik na paliwo, integracja z CO. Bezpłatna konsultacja i wycena.",
-    short: "Kotły na pellet: dobór mocy, montaż i podłączenie do instalacji CO.",
-    intro:
-      "Montaż kotłów na pellet jako ekologiczne i wygodne źródło ciepła. Dobór mocy, zbiornik na paliwo i integracja z instalacją CO.",
-    area: AREA_DEFAULT,
-    sections: [
-      {
-        heading: "Dlaczego kocioł na pellet",
-        body: "Pellet to odnawialne paliwo z wygodnym, zautomatyzowanym podawaniem. Nowoczesny kocioł utrzymuje komfort przy rozsądnych kosztach eksploatacji i dobrze współpracuje z istniejącą instalacją grzewczą.",
-      },
-      {
-        heading: "Dobór, kotłownia i uruchomienie",
-        body: "Dobieramy moc do strat ciepła budynku, planujemy miejsce na kocioł i magazyn pelletu, podłączamy instalację i uruchamiamy urządzenie z ustawieniami na miejscu.",
-      },
-    ],
-    bullets: [
-      "Dobór mocy kotła do strat ciepła",
-      "Układ kotłowni i magazynu pelletu",
-      "Podłączenie do instalacji c.o. i CWU",
-      "Automatyka podawania i sterowanie",
-      "Pierwszy rozruch i instruktaż obsługi",
-      "Czyszczenie, przeglądy i serwis",
-    ],
-    faq: [
-      {
-        q: "Pellet czy pompa ciepła?",
-        a: "Zależy od budynku, budżetu inwestycyjnego i kosztów energii. Często porównujemy oba warianty na oględzinach i pomagamy wybrać sensowniej dla Twojej sytuacji.",
-      },
-      {
-        q: "Ile miejsca potrzeba na kocioł i pellet?",
-        a: "Potrzebujesz kotłowni lub pomieszczenia technicznego oraz miejsca na zbiornik lub magazyn paliwa. Na wizycie mierzymy i proponujemy układ.",
-      },
-    ],
-    match: ["kotł", "kocioł", "pellet", "kotlown"],
-  },
-  {
-    slug: "ogrzewanie-podlogowe",
-    title: "Ogrzewanie podłogowe",
-    titleOf: "ogrzewania podłogowego",
-    headline: "Ogrzewanie podłogowe w Namysłowie",
-    seoTitle: "Ogrzewanie podłogowe Namysłów | montaż | AJM Technika",
-    seoDescription:
-      "Projekt i montaż ogrzewania podłogowego wodnego w Namysłowie i okolicach. Komfort, równomierna temperatura, współpraca z pompą ciepła lub kotłem.",
-    short: "Podłogówka wodna: równomierne ciepło, także z pompą ciepła lub kotłem.",
-    intro:
-      "Projekt i montaż ogrzewania podłogowego wodnego: równomierna temperatura i komfort, także z pompą ciepła lub kotłem.",
-    area: AREA_DEFAULT,
-    sections: [
-      {
-        heading: "Komfort bez zimnych stref",
-        body: "Podłogówka oddaje ciepło całą powierzchnią. Mniej zimnych kątów, swoboda aranżacji bez grzejników na ścianach i bardzo dobre sparowanie z pompą ciepła.",
-      },
-      {
-        heading: "Pętle, rozdzielacz, uruchomienie",
-        body: "Układamy pętle, montujemy rozdzielacz i automatykę stref. Po wylewce i sezonowaniu uruchamiamy układ, odpowietrzamy i ustawiamy obiegi.",
-      },
-    ],
-    bullets: [
-      "Projekt pętli i rozstawu na pomieszczenia",
-      "Izolacja, folia i mocowanie rur",
-      "Rozdzielacz ze strefami / siłownikami",
-      "Sparowanie z pompą ciepła lub kotłem",
-      "Próba ciśnieniowa przed wylewką",
-      "Regulacja obiegów po sezonowaniu",
-    ],
-    faq: [
-      {
-        q: "Podłogówka tylko do nowego domu?",
-        a: "Najczęściej przy wylewce w nowym budownictwie. W modernizacji da się wybrane pomieszczenia lub system dostosowany do warunków. Decyzja po oględzinach.",
-      },
-      {
-        q: "Czy podłogówka wymaga pompy ciepła?",
-        a: "Nie, ale z pompą działa szczególnie dobrze. Może też współpracować z kotłem przy odpowiednio niskiej temperaturze zasilania.",
-      },
-    ],
-    match: ["podłogow", "rozdzielacz", "pętl"],
-  },
-  {
-    slug: "klimatyzacja",
-    title: "Klimatyzacja",
-    titleOf: "klimatyzacji",
-    headline: "Klimatyzacja w Namysłowie i Opolu",
-    seoTitle: "Klimatyzacja Namysłów | montaż klimatyzacji Opole | AJM Technika",
-    seoDescription:
-      "Montaż klimatyzacji split i multi-split w Namysłowie i Opolu. Chłodzenie, dogrzewanie, uruchomienie. Bezpłatna wycena.",
-    short: "Split i multi-split: chłodzenie latem i dogrzewanie poza sezonem.",
-    intro:
-      "Klimatyzacja split i multi-split: chłodzenie latem, dogrzewanie poza sezonem, montaż ze skroplinami i uruchomieniem.",
-    area: AREA_DEFAULT,
-    sections: [
-      {
-        heading: "Komfort przez cały rok",
-        body: "Dobrze dobrana klima to nie tylko chłód w upały. Wiele jednostek też dogrzewa, gdy na zewnątrz jest jeszcze chłodno. Dobieramy moc do pomieszczeń, nasłonecznienia i układu ścian.",
+        heading: "Dlaczego pompa ciepła",
+        body: "Jedna instalacja ogrzewa zimą i często chłodzi latem. Moc liczymy do konkretnego budynku, nie „na oko” z metrażu.",
       },
       {
         heading: "Montaż i uruchomienie",
-        body: "Prowadzimy freon i skropliny estetycznie, ustawiamy jednostki i uruchamiamy instalację. Pokazujemy obsługę pilota i podstawowe tryby pracy.",
+        body: "Dobieramy jednostkę, prowadzimy instalację i automatykę, ustawiamy krzywe grzania. Po rozruchu zostajesz z jasną instrukcją i opieką serwisową.",
+      },
+    ],
+    bullets: [
+      "Obliczenie mocy do strat ciepła",
+      "Jednostka zewnętrzna + hydrobox / bufor",
+      "Podłączenie do c.o., podłogówki i CWU",
+      "Krzywa grzania i automatyka",
+      "Uruchomienie z protokołem",
+      "Przeglądy i wsparcie serwisowe",
+    ],
+    faq: [
+      {
+        q: "Czy pompa ma sens w starszym domu?",
+        a: "Często tak, po sprawdzeniu izolacji i instalacji. Decyzja po oględzinach, nie z katalogu.",
+      },
+      {
+        q: "Czy pomagacie przy dofinansowaniu?",
+        a: "Doradzamy przy wyborze rozwiązania pod kątem programów wsparcia. Szczegóły omawiamy indywidualnie.",
+      },
+    ],
+    match: ["pomp", "hydrobox", "ciepła"],
+  },
+  {
+    slug: "klimatyzacja-wentylacja",
+    title: "Klimatyzacja i wentylacja",
+    titleOf: "klimatyzacji i wentylacji",
+    headline: "Klimatyzacja i wentylacja w Zielonej Górze",
+    seoTitle: "Klimatyzacja Zielona Góra | wentylacja | Instal-Plast",
+    seoDescription:
+      "Sprzedaż i montaż klimatyzacji oraz wentylacji do biur i mieszkań w Zielonej Górze. Airwell, Acson, Dospel. Serwis gwarancyjny i pogwarancyjny.",
+    short: "Klimatyzacja i wentylacja do biur i mieszkań — montaż i serwis.",
+    intro:
+      "Sprzedaż i montaż klimatyzatorów oraz systemów wentylacji do biur i mieszkań. Uruchomienie, przeglądy i serwis.",
+    area: AREA_DEFAULT,
+    sections: [
+      {
+        heading: "Komfort latem i poza sezonem",
+        body: "Dobieramy moc do pomieszczeń i nasłonecznienia. W ofercie m.in. urządzenia Airwell, Acson i Dospel — z jonizacją i programami pracy dziennej / nocnej.",
+      },
+      {
+        heading: "Montaż i serwis",
+        body: "Prowadzimy freon i skropliny estetycznie, uruchamiamy instalację i pokazujemy obsługę. Oferujemy też serwis gwarancyjny i pogwarancyjny.",
       },
     ],
     bullets: [
       "Dobór mocy do metrażu i nasłonecznienia",
-      "Układy split i multi-split",
-      "Trasowanie freonu, skroplin i zasilania",
+      "Klimatyzatory Airwell, Acson, Dospel",
       "Montaż jednostek wewnętrznych i zewnętrznych",
-      "Próżnia, napełnienie i pomiar parametrów",
-      "Przeglądy, czyszczenie i serwis",
+      "Wentylacja pomieszczeń",
+      "Serwis gwarancyjny i pogwarancyjny",
+      "Przeglądy i czyszczenie",
     ],
     faq: [
-      {
-        q: "Split czy multi-split?",
-        a: "Split: jedno pomieszczenie, jedna jednostka zewnętrzna. Multi: kilka pokoi na jednej zewnętrznej. Dobieramy po metrażu i układzie budynku.",
-      },
       {
         q: "Czy klimatyzacja też grzeje?",
-        a: "Tak, większość nowoczesnych jednostek pracuje w trybie grzania. To dobra opcja uzupełniająca poza sezonem, nie zawsze zastępstwo pełnego c.o.",
+        a: "Tak, większość nowoczesnych jednostek pracuje w trybie grzania — dobra opcja uzupełniająca poza sezonem.",
+      },
+      {
+        q: "Czy serwisujecie urządzenia kupione indziej?",
+        a: "Tak — przeglądy i naprawy uzgadniamy po oględzinach.",
       },
     ],
-    match: ["klimatyz", "multi-split", "split"],
+    match: ["klimatyz", "wentylac", "split", "airwell"],
   },
   {
-    slug: "instalacje-wodne",
-    title: "Instalacje wodne",
-    titleOf: "instalacji wodnych",
-    headline: "Instalacje wodne w Namysłowie",
-    seoTitle: "Instalacje wodne Namysłów | montaż | AJM Technika",
+    slug: "serwis-konserwacja",
+    title: "Serwis i konserwacja",
+    titleOf: "serwisu i konserwacji",
+    headline: "Serwis kotłów i instalacji — Zielona Góra, dyżur 24/7",
+    seoTitle: "Serwis kotłów Zielona Góra | Viessmann, Brötje | Instal-Plast",
     seoDescription:
-      "Instalacje wody użytkowej w Namysłowie i okolicach: przyłącza, rozprowadzenie, modernizacje. Bezpłatna konsultacja i wycena.",
-    short: "Woda użytkowa: przyłącza, rozprowadzenie i modernizacje.",
+      "Serwis i konserwacja kotłów Viessmann, Buderus, Brötje, Weishaupt, Riello, Koerting, Giersch. Dyżur 24/7. Zielona Góra i Lubuskie.",
+    short: "Przeglądy, naprawy i dyżur 24/7 — kotły i instalacje grzewcze.",
     intro:
-      "Instalacje wody użytkowej w budynkach mieszkalnych i użytkowych: od przyłączy po rozprowadzenie i modernizacje.",
+      "Stały nadzór nad systemami grzewczymi: konserwacja, przeglądy techniczne i bieżące naprawy. Dyżur telefoniczny 24/7.",
     area: AREA_DEFAULT,
     sections: [
       {
-        heading: "Sprawna woda w całym budynku",
-        body: "Prawidłowo zaprojektowana instalacja wodna to stabilne ciśnienie, mniej awarii i łatwiejszy serwis. Dobieramy przekroje i trasę pod realne zużycie i układ pomieszczeń.",
+        heading: "Opieka techniczna nad kotłownią",
+        body: "W ramach umowy prowadzimy konserwację urządzeń cieplnych, naprawy i regularne przeglądy. Każdy przegląd kończy się protokołem serwisowym.",
       },
       {
-        heading: "Nowe instalacje i modernizacje",
-        body: "Robimy nowe rozprowadzenia oraz wymiany w istniejących budynkach. Po pracach sprawdzamy szczelność i zostawiamy przejrzysty opis wykonanego zakresu.",
+        heading: "Marki i dyżur",
+        body: "Serwisujemy m.in. Viessmann, Buderus, Brötje, Weishaupt, Riello, Koerting i Giersch. Telefon serwisowy czynny całodobowo.",
       },
     ],
     bullets: [
-      "Projekt rozprowadzenia zimnej i ciepłej wody",
-      "Przyłącze, zawory i zabezpieczenia",
-      "Wymiana odcinków lub całej instalacji",
-      "Dobór średnic pod ciśnienie i zużycie",
-      "Próby szczelności przed zabudową",
-      "Przygotowanie pod zmiękczacz / filtrację",
+      "Przeglądy gwarancyjne i pogwarancyjne",
+      "Analiza spalin i pomiary",
+      "Serwis Viessmann, Buderus, Brötje i innych",
+      "Dokumentacja i protokoły",
+      "Dyżur 24/7",
+      "Obsługa techniczna nieruchomości",
     ],
     faq: [
       {
-        q: "Czy wymieniacie tylko fragment instalacji?",
-        a: "Tak, od punktu w łazience po większy zakres w budynku. Zakres ustalamy po oględzinach.",
+        q: "Czy serwis jest dostępny w nocy?",
+        a: "Tak — deklarujemy dyżur 24/7 w zakresie awarii instalacji grzewczych i pokrewnych.",
       },
       {
-        q: "Czy łączycie instalację wodną z uzdatnianiem?",
-        a: "Tak. Często przy twardej wodzie od razu planujemy zmiękczanie lub filtrację, żeby chronić instalację i AGD.",
+        q: "Czy robicie przeglądy okresowe na umowę?",
+        a: "Tak — to dobre rozwiązanie dla firm i instytucji z kotłowniami.",
       },
     ],
-    match: ["wodn", "woda użytk", "przyłącz"],
+    match: ["serwis", "przegląd", "konserwac", "napraw"],
   },
   {
-    slug: "instalacje-sanitarne",
-    title: "Instalacje sanitarne",
-    titleOf: "instalacji sanitarnych",
-    headline: "Instalacje sanitarne w Namysłowie i Opolu",
-    seoTitle: "Instalacje sanitarne Namysłów i Opole | AJM Technika",
+    slug: "badania-termowizyjne",
+    title: "Badania termowizyjne",
+    titleOf: "badań termowizyjnych",
+    headline: "Badania termowizyjne Flir — Zielona Góra",
+    seoTitle: "Termowizja Zielona Góra | kamera Flir | Instal-Plast",
     seoDescription:
-      "Kompleksowe instalacje sanitarne w Namysłowie i Opolu: kanalizacja, podejścia, piony, modernizacja łazienek w zakresie instalacji.",
-    short: "Kanalizacja, podejścia, piony i instalacje pod łazienki.",
+      "Pomiary termowizyjne kamerą Flir w Zielonej Górze. Wykrywanie mostków cieplnych i braków izolacji. Raport z rekomendacjami.",
+    short: "Kamera Flir: mostki cieplne, braki izolacji, diagnoza budynku.",
     intro:
-      "Instalacje sanitarne: kanalizacja, podejścia, wymiana pionów i modernizacja łazienek w zakresie instalacji.",
+      "Pomiary termowizyjne nowoczesną kamerą Flir — analiza wycieków ciepła i braków izolacji w budynku.",
     area: AREA_DEFAULT,
     sections: [
       {
-        heading: "Solidna instalacja sanitarna",
-        body: "Dobrze wykonana kanalizacja i podejścia to mniej problemów z odpływami, hałasem i dostępem serwisowym. Planujemy trasę pod komfort użytkowania i przyszłe remonty.",
+        heading: "Po co termowizja",
+        body: "To szybki sposób, by zobaczyć, gdzie budynek traci ciepło: mostki, nieszczelności, problemy z izolacją. Pomaga zaplanować sensowny remont, nie domysły.",
       },
       {
-        heading: "Modernizacje i nowe budynki",
-        body: "Pracujemy przy nowych inwestycjach i wymianach w istniejących obiektach. Koordynujemy zakres z innymi instalacjami (woda, ogrzewanie), gdy to potrzebne.",
+        heading: "Jak wygląda badanie",
+        body: "Ustalamy zakres, wykonujemy pomiary w odpowiednich warunkach i omawiamy wyniki z konkretnymi rekomendacjami.",
       },
     ],
     bullets: [
-      "Kanalizacja sanitarna i odpływy",
-      "Podejścia pod umywalki, WC, prysznic",
-      "Wymiana pionów w budynkach istniejących",
-      "Syfony, rewizje i dostęp serwisowy",
-      "Koordynacja z wodą i ogrzewaniem",
-      "Próby szczelności przed glazurą",
+      "Kamera Flir (podczerwień)",
+      "Lokalizacja mostków cieplnych",
+      "Ocena izolacji i nieszczelności",
+      "Wsparcie przy termomodernizacji",
+      "Jasne wnioski po pomiarze",
+      "Możliwość dalszych prac naprawczych",
     ],
     faq: [
       {
-        q: "Czy robicie samą instalację bez wykończenia łazienki?",
-        a: "Tak, skupiamy się na instalacji. Wykończenie może wykonać ekipa glazurnicza lub generalny wykonawca.",
+        q: "Kiedy najlepiej robić badanie?",
+        a: "Gdy jest wyraźna różnica temperatur wewnątrz i na zewnątrz — wtedy termogramy są najbardziej czytelne.",
       },
       {
-        q: "Jak zaplanować prace przy remoncie?",
-        a: "Najpierw oględziny i ustalenie kolejności (demontaż, nowe podejścia, próby). Dzięki temu unikasz poprawek pod płytkami.",
+        q: "Czy dostaję raport?",
+        a: "Omawiamy wyniki na miejscu i wskazujemy, co warto poprawić. Formę dokumentacji ustalamy przy zleceniu.",
       },
     ],
-    match: ["sanitar", "kanaliz", "łazien", "pion"],
+    match: ["termowiz", "flir", "mostk"],
   },
   {
-    slug: "instalacje-przemyslowe",
-    title: "Instalacje przemysłowe",
-    titleOf: "instalacji przemysłowych",
-    headline: "Instalacje przemysłowe w Opolu i Namysłowie",
-    seoTitle: "Instalacje przemysłowe Opole i Namysłów | AJM Technika",
+    slug: "kotly-biopaliwa",
+    title: "Kotły na biopaliwa",
+    titleOf: "kotłów na biopaliwa",
+    headline: "Kotły na biopaliwa — Zielona Góra i Lubuskie",
+    seoTitle: "Kotły na biopaliwa Zielona Góra | biomasa | Instal-Plast",
     seoDescription:
-      "Instalacje dla obiektów firmowych i przemysłowych w Opolu, Namysłowie i regionie. Zakres po oględzinach. Bezpłatna konsultacja.",
-    short: "Instalacje dla firm i obiektów przemysłowych. Zakres po oględzinach.",
+      "Kotły na biopaliwa (biomasa, holzgas) — sprzedaż i montaż w Zielonej Górze. Dobór mocy, kotłownia, uruchomienie.",
+    short: "Kotły na biomasę i holzgas — ekologiczne źródło ciepła.",
     intro:
-      "Instalacje dla firm i obiektów przemysłowych: rozwiązania pod ciągłość pracy i serwis. Zakres po oględzinach.",
+      "Kotły z dziedziny biopaliw (biomasa, holzgas): dobór mocy, montaż i uruchomienie jako ekologiczne źródło ciepła.",
     area: AREA_DEFAULT,
     sections: [
       {
-        heading: "Rozwiązania pod obiekt, nie z katalogu",
-        body: "W obiektach firmowych liczy się niezawodność, dostęp serwisowy i jasny zakres prac. Ustalamy potrzeby techniczne na miejscu i proponujemy realny plan montażu.",
+        heading: "Odnawialne paliwo, wygodna eksploatacja",
+        body: "Nowoczesne kotły na biomasę łączą niższy ślad węglowy z automatycznym podawaniem paliwa. Dobieramy moc i układ kotłowni pod budynek.",
       },
       {
-        heading: "Od konsultacji do uruchomienia",
-        body: "Po konsultacji przygotowujemy wycenę, realizujemy uzgodniony zakres i uruchamiamy instalację. Możliwa dalsza opieka serwisowa według ustaleń.",
+        heading: "Montaż i instruktaż",
+        body: "Planujemy miejsce na kocioł i magazyn paliwa, podłączamy instalację i uruchamiamy urządzenie z ustawieniami na miejscu.",
       },
     ],
     bullets: [
-      "Kotłownie i hydroboxy w obiektach firmowych",
-      "Pompy ciepła / klima pod kubaturę hali",
-      "Instalacje c.o., CWU i woda użytkowa",
-      "Harmonogram prac poza szczytem produkcji",
-      "Dokumentacja powykonawcza i rozruch",
-      "Umowy serwisowe i przeglądy okresowe",
+      "Dobór mocy do strat ciepła",
+      "Biomasa / holzgas",
+      "Układ kotłowni i magazynu paliwa",
+      "Podłączenie do c.o. i CWU",
+      "Uruchomienie i instruktaż",
+      "Przeglądy i serwis",
     ],
     faq: [
       {
-        q: "Jakie obiekty obsługujecie?",
-        a: "Obiekty firmowe i przemysłowe o różnej skali. Konkretny zakres (HVAC, woda, inne instalacje) ustalamy indywidualnie.",
+        q: "Biomasa czy pompa ciepła?",
+        a: "Zależy od budynku, budżetu i dostępności paliwa. Porównujemy warianty na oględzinach.",
       },
       {
-        q: "Czy pracujecie poza godzinami biurowymi obiektu?",
-        a: "Gdy obiekt tego wymaga, planujemy prace tak, by ograniczyć przestoje. Szczegóły w wycenie.",
+        q: "Ile miejsca potrzeba na paliwo?",
+        a: "Zależy od mocy i sposobu zasilania. Na wizycie mierzymy i proponujemy układ.",
       },
     ],
-    match: ["przemysł", "firmow", "obiekt"],
+    match: ["biopal", "biomas", "holzgas", "pellet"],
   },
   {
-    slug: "rekuperacja",
-    title: "Rekuperacja",
-    titleOf: "rekuperacji",
-    headline: "Rekuperacja w Namysłowie i Opolu",
-    seoTitle: "Rekuperacja Namysłów i Opole | montaż | AJM Technika",
+    slug: "solary",
+    title: "Systemy solarne",
+    titleOf: "systemów solarnych",
+    headline: "Systemy solarne w Zielonej Górze",
+    seoTitle: "Kolektory słoneczne Zielona Góra | solary | Instal-Plast",
     seoDescription:
-      "Wentylacja mechaniczna z odzyskiem ciepła w Namysłowie i Opolu. Świeże powietrze, mniej wilgoci, lepszy komfort. Bezpłatna wycena.",
-    short: "Wentylacja z odzyskiem ciepła: świeże powietrze bez strat energii.",
+      "Montaż systemów solarnych (kolektory) w Zielonej Górze i na Lubuskiem. CWU z energią słoneczną, integracja z kotłem lub pompą.",
+    short: "Kolektory słoneczne do CWU — montaż i integracja z kotłownią.",
     intro:
-      "Wentylacja z odzyskiem ciepła: świeże powietrze bez wychładzania budynku, mniej wilgoci i lepszy komfort.",
+      "Systemy solarne do podgrzewu wody użytkowej: dobór kolektorów, montaż i integracja z istniejącym źródłem ciepła.",
     area: AREA_DEFAULT,
     sections: [
       {
-        heading: "Świeże powietrze bez strat ciepła",
-        body: "W szczelnym budynku bez wentylacji mechanicznej pojawia się wilgoć i „stare” powietrze. Rekuperator wymienia powietrze i odzyskuje ciepło z wywiewu.",
+        heading: "Ciepła woda z słońca",
+        body: "Dobrze dobrany układ solarny obniża koszty CWU w sezonie. Dobieramy powierzchnię kolektorów i zasobnik do zużycia w domu.",
       },
       {
-        heading: "Centrala, kanały, regulacja",
-        body: "Dobieramy centralę, prowadzimy kanały, czerpnie i wyrzutnie. Po montażu regulujemy przepływy i pokazujemy wymianę filtrów.",
+        heading: "Integracja z kotłownią",
+        body: "Łączymy solary z kotłem gazowym, olejowym lub pompą ciepła tak, by układ działał stabilnie przez cały rok.",
       },
     ],
     bullets: [
-      "Dobór centrali do kubatury i liczby osób",
-      "Trasy kanałów, anemostaty, czerpnia / wyrzutnia",
-      "Wymiennik ciepła (odzysk z wywiewu)",
-      "Filtry i łatwy dostęp do wymiany",
-      "Regulacja przepływów na pomieszczenia",
-      "Pomiary po rozruchu i instruktaż filtrów",
+      "Dobór kolektorów i zasobnika",
+      "Montaż na dachu lub konstrukcji",
+      "Integracja z kotłem / pompą ciepła",
+      "Automatyka i zabezpieczenia",
+      "Uruchomienie i instruktaż",
+      "Przeglądy sezonowe",
     ],
     faq: [
       {
-        q: "Czy rekuperacja ma sens w starym domu?",
-        a: "Ma, jeśli dom jest ocieplony i szczelny albo planujesz termomodernizację. W nieszczelnym budynku najpierw izolacja, potem wentylacja mechaniczna.",
+        q: "Czy solary wystarczą zimą?",
+        a: "Zimą wspomagają CWU, ale zwykle nie zastępują głównego źródła ciepła. Dobieramy układ realistycznie.",
       },
       {
-        q: "Jak często wymieniać filtry?",
-        a: "Zwykle co 3-6 miesięcy, zależnie od lokalizacji. Pokazujemy to przy odbiorze.",
+        q: "Czy da się dołożyć solary do istniejącej kotłowni?",
+        a: "Często tak — po ocenie zasobnika, miejsca na kolektory i automatyki.",
       },
     ],
-    match: ["rekuper", "wentylac", "centrala"],
-  },
-  {
-    slug: "uzdatnianie-wody",
-    title: "Uzdatnianie wody",
-    titleOf: "uzdatniania wody",
-    headline: "Uzdatnianie wody w Namysłowie i Opolu",
-    seoTitle: "Uzdatnianie wody Namysłów | zmiękczacz wody Opole | AJM Technika",
-    seoDescription:
-      "Stacje uzdatniania, zmiękczanie i filtracja w Namysłowie i Opolu. Ochrona instalacji i AGD, lepsza woda w domu. Bezpłatna konsultacja.",
-    short: "Zmiękczanie i filtracja: ochrona instalacji, AGD i lepsza woda.",
-    intro:
-      "Zmiękczanie i filtracja wody: ochrona instalacji i AGD oraz lepsza jakość wody w domu.",
-    area: AREA_DEFAULT,
-    sections: [
-      {
-        heading: "Dlaczego uzdatniać wodę",
-        body: "Twarda woda zostawia kamień, skraca życie bojlerów, baterii i sprzętów. Dobrze dobrane uzdatnianie ogranicza te problemy i poprawia jakość wody w kranie.",
-      },
-      {
-        heading: "Dobór stacji i montaż",
-        body: "Na podstawie parametrów wody i zużycia dobieramy zmiękczacz lub filtrację, montujemy na instalacji i uruchamiamy urządzenie z instruktażem obsługi.",
-      },
-    ],
-    bullets: [
-      "Dobór na podstawie twardości i zużycia",
-      "Zmiękczacze, filtry i stacje uzdatniania",
-      "Montaż na instalacji zimnej wody",
-      "Ustawienie regeneracji i instruktaż soli",
-      "Ochrona bojlera, baterii i AGD",
-      "Serwis, wymiana wkładów i przeglądy",
-    ],
-    faq: [
-      {
-        q: "Czy najpierw trzeba zbadać wodę?",
-        a: "Przy doborze zmiękczacza i filtracji warto znać twardość i podstawowe parametry. Pomożemy ustalić, co jest potrzebne w Twoim przypadku.",
-      },
-      {
-        q: "Czy uzdatnianie łączycie z nową instalacją wodną?",
-        a: "Tak, często planujemy to razem przy modernizacji lub nowym rozprowadzeniu wody.",
-      },
-    ],
-    match: ["uzdatnian", "zmiękcz", "filtr"],
+    match: ["solar", "kolektor", "słońc"],
   },
 ];
 

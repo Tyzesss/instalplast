@@ -13,9 +13,9 @@ import { SERVICES } from "@/lib/services";
 const INSTALLATION_PHOTOS = 20;
 
 const STATS = [
-  { value: 4, suffix: "+", label: "Lat doświadczenia" },
+  { value: 20, suffix: "+", label: "Lat doświadczenia" },
   { value: INSTALLATION_PHOTOS, suffix: "+", label: "Instalacji" },
-  { value: 5, suffix: ".0", label: "Ocena Google" },
+  { value: 24, suffix: "/7", label: "Serwis awaryjny" },
   { value: SERVICES.length, suffix: "", label: "Usług w ofercie" },
 ];
 

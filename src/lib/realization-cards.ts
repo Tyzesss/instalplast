@@ -3,12 +3,8 @@ import ajmPompaMideaDach from "@/assets/ajm-pompa-midea-dach.jpg";
 import ajmPompaStiebel from "@/assets/ajm-pompa-stiebel-outdoor.jpg";
 import ajmJednostkiDuo from "@/assets/ajm-jednostki-zew-midea-duo.jpg";
 import ajmKotlowniaPanasonic from "@/assets/ajm-kotlownia-panasonic-galmet.jpg";
-import ajmKotlowniaRotenso from "@/assets/ajm-kotlownia-rotenso-filtry.jpg";
 import ajmKociolHlazar from "@/assets/ajm-kociol-hlazar-pellet.jpg";
 import ajmKotlowniaPellet from "@/assets/ajm-kotlownia-pellet-zasobniki.jpg";
-import ajmPodlogowka from "@/assets/ajm-podlogowka-petle.jpg";
-import ajmSanitarnaSciana from "@/assets/ajm-instalacja-sanitarna-sciana.jpg";
-import ajmKanalizacjaPex from "@/assets/ajm-instalacja-kanalizacja-pex.jpg";
 import ajmGalmetInstalacja from "@/assets/ajm-kotlownia-galmet-instalacja.jpg";
 
 export type RealizationCard = {
@@ -28,12 +24,8 @@ const FOCUS: Record<string, string> = {
   [ajmPompaStiebel]: "58% 40%",
   [ajmJednostkiDuo]: "36% 28%",
   [ajmKotlowniaPanasonic]: "48% 40%",
-  [ajmKotlowniaRotenso]: "55% 32%",
   [ajmKociolHlazar]: "64% 36%",
   [ajmKotlowniaPellet]: "52% 38%",
-  [ajmPodlogowka]: "50% 68%",
-  [ajmSanitarnaSciana]: "55% 42%",
-  [ajmKanalizacjaPex]: "48% 48%",
   [ajmGalmetInstalacja]: "42% 40%",
 };
 
@@ -76,97 +68,58 @@ const BY_SERVICE: Record<string, Omit<RealizationCard, "focus">[]> = {
       alt: "Jednostka zewnętrzna Stiebel Eltron na cegłach",
     },
   ],
-  "kotly-pelletowe": [
+  "kotly-gazowe-olejowe": [
     {
-      title: "Kocioł Lazar Smart Fire",
+      title: "Kotłownia gazowa",
       year: "2025",
-      scope: "Montaż kotła pelletowego w kotłowni.",
+      scope: "Kocioł, zasobnik CWU i orurowanie.",
+      image: ajmKotlowniaPellet,
+      alt: "Kotłownia z kotłem i zasobnikami",
+    },
+    {
+      title: "Urządzenie w kotłowni",
+      year: "2025",
+      scope: "Montaż kotła w pomieszczeniu technicznym.",
       image: ajmKociolHlazar,
-      alt: "Kocioł pelletowy Lazar Smart Fire w kotłowni",
+      alt: "Kocioł w kotłowni po montażu",
+    },
+  ],
+  "kotly-biopaliwa": [
+    {
+      title: "Kocioł na biopaliwa",
+      year: "2025",
+      scope: "Montaż kotła w kotłowni.",
+      image: ajmKociolHlazar,
+      alt: "Kocioł na biopaliwa w kotłowni",
     },
     {
       title: "Kotłownia z zasobnikami",
       year: "2025",
-      scope: "Kocioł pelletowy, zasobnik CWU i bufor.",
+      scope: "Kocioł, zasobnik CWU i bufor.",
       image: ajmKotlowniaPellet,
-      alt: "Kotłownia z kotłem pelletowym i zasobnikami",
+      alt: "Kotłownia z kotłem i zasobnikami",
     },
   ],
-  "ogrzewanie-podlogowe": [
+  "klimatyzacja-wentylacja": [
     {
-      title: "Pętle przed wylewką",
-      year: "2025",
-      scope: "Ułożenie pętli na izolacji refleksyjnej.",
-      image: ajmPodlogowka,
-      alt: "Pętle ogrzewania podłogowego przed wylewką",
-    },
-  ],
-  klimatyzacja: [
-    {
-      title: "Jednostki zewnętrzne Midea",
+      title: "Jednostki zewnętrzne",
       year: "2023",
       scope: "Dwie jednostki zewnętrzne na bloczkach betonowych.",
       image: ajmJednostkiDuo,
-      alt: "Dwie jednostki zewnętrzne Midea przy elewacji",
+      alt: "Dwie jednostki zewnętrzne klimatyzacji przy elewacji",
     },
   ],
-  "instalacje-wodne": [
+  "serwis-konserwacja": [
     {
-      title: "Zasobnik Galmet i pompy",
-      year: "2025",
-      scope: "Zasobnik CWU z pompami obiegowymi i armaturą.",
-      image: ajmGalmetInstalacja,
-      alt: "Zasobnik Galmet z pompami obiegowymi w kotłowni",
-    },
-    {
-      title: "Rozprowadzenie wody w ścianie",
-      year: "2025",
-      scope: "Podejścia ciepłej i zimnej wody na stelażu.",
-      image: ajmSanitarnaSciana,
-      alt: "Instalacja wodna czerwona i niebieska na stelażu",
-    },
-    {
-      title: "Podejścia wody przy kanalizacji",
-      year: "2025",
-      scope: "PEX i kanalizacja na etapie budowy.",
-      image: ajmKanalizacjaPex,
-      alt: "Podejścia wody ciepłej i zimnej przy kanalizacji",
-    },
-  ],
-  "instalacje-sanitarne": [
-    {
-      title: "Instalacja wodno-sanitarna",
-      year: "2025",
-      scope: "Woda i kanalizacja w ścianie na stelażu.",
-      image: ajmSanitarnaSciana,
-      alt: "Instalacja wodno-sanitarna na stelażu metalowym",
-    },
-    {
-      title: "Kanalizacja i odpływy",
-      year: "2025",
-      scope: "Kanalizacja w posadzce oraz podejścia.",
-      image: ajmKanalizacjaPex,
-      alt: "Kanalizacja w posadzce z odpływem i podejściami",
-    },
-    {
-      title: "Kotłownia po montażu",
+      title: "Kotłownia po serwisie",
       year: "2025",
       scope: "Zasobnik i orurowanie w pomieszczeniu technicznym.",
       image: ajmGalmetInstalacja,
-      alt: "Kotłownia z zasobnikiem Galmet po montażu",
+      alt: "Kotłownia z zasobnikiem po przeglądzie",
     },
   ],
-  "instalacje-przemyslowe": [],
-  rekuperacja: [],
-  "uzdatnianie-wody": [
-    {
-      title: "Filtracja przy kotłowni",
-      year: "2025",
-      scope: "Stacja filtrów i orurowanie przy zasobniku.",
-      image: ajmKotlowniaRotenso,
-      alt: "Filtry wody i hydrobox w kotłowni",
-    },
-  ],
+  "badania-termowizyjne": [],
+  solary: [],
 };
 
 export function getServiceRealizationCards(slug: string): RealizationCard[] {

@@ -14,10 +14,10 @@ import { Contact } from "@/components/landing/Contact";
 import { Footer } from "@/components/landing/Footer";
 import { StickyCallBar } from "@/components/landing/StickyCallBar";
 import { scrollToSection } from "@/lib/scroll-to-section";
+import { SITE_NAME, SITE_TITLE } from "@/lib/site";
 
-const title = "AJM Technika - Pompy ciepła, klimatyzacja i kotły | Namysłów";
-const description =
-  "AJM Technika: instalacje grzewcze, chłodnicze i sanitarne w Namysłowie i na Opolszczyźnie: pompy ciepła, klimatyzacja, kotły i rekuperacja. Bezpłatna wycena, montaż i serwis.";
+const title = SITE_TITLE;
+const description = `${SITE_NAME}: kotły gazowe i olejowe, pompy ciepła, klimatyzacja, serwis 24/7 i termowizja w Zielonej Górze oraz w województwie lubuskim. Bezpłatna wycena, montaż i serwis.`;
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -30,87 +30,66 @@ import sidePompy from "@/assets/service-side-pompy-ciepla.png";
 import sideKotly from "@/assets/service-side-kotly-pelletowe.png";
 import sidePodlogowe from "@/assets/service-side-podlogowe.png";
 import sideKlima from "@/assets/service-side-klimatyzacja.png";
-import sideWodne from "@/assets/service-side-wodne.png";
-import sideSanitarne from "@/assets/service-side-sanitarne.png";
 import sidePrzemyslowe from "@/assets/service-side-przemyslowe.png";
-import sideRecup from "@/assets/service-side-rekuperacja.png";
 import sideWoda from "@/assets/service-side-uzdatnianie.png";
 import faqBgPompy from "@/assets/faq-bg-pompy-ciepla.png";
 import faqBgKotly from "@/assets/faq-bg-kotly-pelletowe.png";
 import faqBgPodlogowe from "@/assets/faq-bg-ogrzewanie-podlogowe.png";
 import faqBgKlima from "@/assets/faq-bg-klimatyzacja.png";
-import faqBgWodne from "@/assets/faq-bg-instalacje-wodne.png";
-import faqBgSanitarne from "@/assets/faq-bg-instalacje-sanitarne.png";
 import faqBgPrzemyslowe from "@/assets/faq-bg-instalacje-przemyslowe.png";
-import faqBgRekuperacja from "@/assets/faq-bg-rekuperacja.png";
 import faqBgUzdatnianie from "@/assets/faq-bg-uzdatnianie-wody.png";
 import heroPompy from "@/assets/service-hero-pompy-ciepla.png";
 import heroKotly from "@/assets/service-hero-kotly-pelletowe.png";
 import heroPodlogowe from "@/assets/service-hero-ogrzewanie-podlogowe.png";
 import heroKlima from "@/assets/service-hero-klimatyzacja.png";
-import heroWodne from "@/assets/service-hero-instalacje-wodne.png";
-import heroSanitarne from "@/assets/service-hero-instalacje-sanitarne.png";
 import heroPrzemyslowe from "@/assets/service-hero-instalacje-przemyslowe.png";
-import heroRekuperacja from "@/assets/service-hero-rekuperacja.png";
 import heroUzdatnianie from "@/assets/service-hero-uzdatnianie-wody.png";
 
 const HERO_IMAGES: Record<string, { src: string; position?: string }> = {
+  "kotly-gazowe-olejowe": { src: heroKotly, position: "55% 40%" },
   "pompy-ciepla": { src: heroPompy, position: "65% 45%" },
-  "kotly-pelletowe": { src: heroKotly, position: "55% 40%" },
-  "ogrzewanie-podlogowe": { src: heroPodlogowe, position: "60% 45%" },
-  klimatyzacja: { src: heroKlima, position: "70% 40%" },
-  "instalacje-wodne": { src: heroWodne, position: "55% 45%" },
-  "instalacje-sanitarne": { src: heroSanitarne, position: "55% 40%" },
-  "instalacje-przemyslowe": { src: heroPrzemyslowe, position: "60% 40%" },
-  rekuperacja: { src: heroRekuperacja, position: "55% 45%" },
-  "uzdatnianie-wody": { src: heroUzdatnianie, position: "55% 45%" },
+  "klimatyzacja-wentylacja": { src: heroKlima, position: "70% 40%" },
+  "serwis-konserwacja": { src: heroPrzemyslowe, position: "60% 40%" },
+  "badania-termowizyjne": { src: heroUzdatnianie, position: "55% 45%" },
+  "kotly-biopaliwa": { src: heroKotly, position: "55% 40%" },
+  solary: { src: heroPodlogowe, position: "60% 45%" },
 };
 
 const FAQ_BACKGROUNDS: Record<string, { src: string; alt: string; position?: string }> = {
+  "kotly-gazowe-olejowe": {
+    src: faqBgKotly,
+    alt: "Kotłownia z kotłem gazowym",
+    position: "55% 40%",
+  },
   "pompy-ciepla": {
     src: faqBgPompy,
     alt: "Pompa ciepła przy nowoczesnym domu o zmierzchu",
     position: "70% 45%",
   },
-  "kotly-pelletowe": {
-    src: faqBgKotly,
-    alt: "Kotłownia z kotłem pelletowym",
-    position: "55% 40%",
-  },
-  "ogrzewanie-podlogowe": {
-    src: faqBgPodlogowe,
-    alt: "Pętle ogrzewania podłogowego",
-    position: "50% 55%",
-  },
-  klimatyzacja: {
+  "klimatyzacja-wentylacja": {
     src: faqBgKlima,
     alt: "Klimatyzacja w nowoczesnym salonie",
     position: "60% 35%",
   },
-  "instalacje-wodne": {
-    src: faqBgWodne,
-    alt: "Instalacja wodna z armaturą",
-    position: "50% 45%",
-  },
-  "instalacje-sanitarne": {
-    src: faqBgSanitarne,
-    alt: "Instalacja sanitarna przed wykończeniem",
-    position: "50% 40%",
-  },
-  "instalacje-przemyslowe": {
+  "serwis-konserwacja": {
     src: faqBgPrzemyslowe,
-    alt: "Instalacje przemysłowe HVAC",
+    alt: "Serwis instalacji grzewczych",
     position: "45% 40%",
   },
-  rekuperacja: {
-    src: faqBgRekuperacja,
-    alt: "Centrala rekuperacji z kanałami",
-    position: "55% 45%",
-  },
-  "uzdatnianie-wody": {
+  "badania-termowizyjne": {
     src: faqBgUzdatnianie,
-    alt: "Stacja uzdatniania wody",
+    alt: "Badanie termowizyjne budynku",
     position: "50% 45%",
+  },
+  "kotly-biopaliwa": {
+    src: faqBgKotly,
+    alt: "Kotłownia na biopaliwa",
+    position: "55% 40%",
+  },
+  solary: {
+    src: faqBgPodlogowe,
+    alt: "System solarny przy budynku",
+    position: "50% 55%",
   },
 };
 
@@ -118,64 +97,52 @@ const IMAGES: Record<
   string,
   { src: string; alt: string; position: string; heroPosition?: string; heroZoom?: number }
 > = {
+  "kotly-gazowe-olejowe": {
+    src: sideKotly,
+    alt: "Kotłownia z kotłem gazowym lub olejowym",
+    position: "48% 42%",
+  },
   "pompy-ciepla": {
     src: sidePompy,
     alt: "Pompa ciepła powietrze-woda przy domu jednorodzinnym",
     position: "50% 45%",
   },
-  "kotly-pelletowe": {
-    src: sideKotly,
-    alt: "Kocioł pelletowy w kotłowni z zasobnikami",
-    position: "48% 42%",
-  },
-  "ogrzewanie-podlogowe": {
-    src: sidePodlogowe,
-    alt: "Pętle ogrzewania podłogowego przed wylewką",
-    position: "50% 55%",
-  },
-  klimatyzacja: {
+  "klimatyzacja-wentylacja": {
     src: sideKlima,
     alt: "Jednostki zewnętrzne klimatyzacji przy elewacji",
     position: "50% 45%",
   },
-  "instalacje-wodne": {
-    src: sideWodne,
-    alt: "Instalacja wody użytkowej z rozdzielaczami i armaturą",
-    position: "50% 45%",
-  },
-  "instalacje-sanitarne": {
-    src: sideSanitarne,
-    alt: "Instalacje sanitarne i podejścia przed wykończeniem",
-    position: "50% 48%",
-  },
-  "instalacje-przemyslowe": {
+  "serwis-konserwacja": {
     src: sidePrzemyslowe,
-    alt: "Jednostki HVAC na dachu obiektu użytkowego",
+    alt: "Serwis i konserwacja instalacji HVAC",
     position: "50% 42%",
   },
-  rekuperacja: {
-    src: sideRecup,
-    alt: "Centrala rekuperacji z zaizolowanymi kanałami",
-    position: "50% 42%",
-  },
-  "uzdatnianie-wody": {
+  "badania-termowizyjne": {
     src: sideWoda,
-    alt: "Stacja uzdatniania i zmiękczania wody",
+    alt: "Badanie termowizyjne instalacji i budynku",
     position: "48% 40%",
+  },
+  "kotly-biopaliwa": {
+    src: sideKotly,
+    alt: "Kocioł na biopaliwa w kotłowni",
+    position: "48% 42%",
+  },
+  solary: {
+    src: sidePodlogowe,
+    alt: "System solarny do CWU",
+    position: "50% 55%",
   },
 };
 
 /** Same generated shots as the right-side panel on service pages. */
 const CARD_THUMBS: Record<string, { src: string; position: string }> = {
+  "kotly-gazowe-olejowe": { src: sideKotly, position: "48% 42%" },
   "pompy-ciepla": { src: sidePompy, position: "50% 45%" },
-  "kotly-pelletowe": { src: sideKotly, position: "48% 42%" },
-  "ogrzewanie-podlogowe": { src: sidePodlogowe, position: "50% 55%" },
-  klimatyzacja: { src: sideKlima, position: "50% 45%" },
-  "instalacje-wodne": { src: sideWodne, position: "50% 45%" },
-  "instalacje-sanitarne": { src: sideSanitarne, position: "50% 48%" },
-  "instalacje-przemyslowe": { src: sidePrzemyslowe, position: "50% 42%" },
-  rekuperacja: { src: sideRecup, position: "50% 42%" },
-  "uzdatnianie-wody": { src: sideWoda, position: "48% 40%" },
+  "klimatyzacja-wentylacja": { src: sideKlima, position: "50% 45%" },
+  "serwis-konserwacja": { src: sidePrzemyslowe, position: "50% 42%" },
+  "badania-termowizyjne": { src: sideWoda, position: "48% 40%" },
+  "kotly-biopaliwa": { src: sideKotly, position: "48% 42%" },
+  solary: { src: sidePodlogowe, position: "50% 55%" },
 };
 
 function OtherServiceCard({ item }: { item: (typeof SERVICES)[number] }) {

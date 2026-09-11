@@ -1,30 +1,26 @@
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowUpRight,
-  Droplets,
-  Factory,
-  Fan,
+  Camera,
   Flame,
-  Gauge,
-  Pipette,
+  Leaf,
   Snowflake,
+  Sun,
   Thermometer,
-  Waves,
+  Wrench,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 import { SERVICES } from "@/lib/services";
 
 const ICONS: Record<string, LucideIcon> = {
+  "kotly-gazowe-olejowe": Flame,
   "pompy-ciepla": Thermometer,
-  "kotly-pelletowe": Flame,
-  "ogrzewanie-podlogowe": Gauge,
-  klimatyzacja: Snowflake,
-  "instalacje-wodne": Droplets,
-  "instalacje-sanitarne": Pipette,
-  "instalacje-przemyslowe": Factory,
-  rekuperacja: Fan,
-  "uzdatnianie-wody": Waves,
+  "klimatyzacja-wentylacja": Snowflake,
+  "serwis-konserwacja": Wrench,
+  "badania-termowizyjne": Camera,
+  "kotly-biopaliwa": Leaf,
+  solary: Sun,
 };
 
 function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
@@ -66,8 +62,8 @@ export function Services() {
               <span className="text-gradient-cyan">dla domu i biznesu</span>
             </h2>
             <p className="mt-4 max-w-2xl text-muted-foreground">
-              Pompy ciepła, klimatyzacja, pellet, rekuperacja i instalacje wodno-sanitarne. Dobór,
-              montaż i serwis w Namysłowie, Opolu i okolicach.
+              Kotły gazowe i olejowe, pompy ciepła, klimatyzacja, serwis 24/7 i termowizja. Dobór,
+              montaż i serwis w Zielonej Górze oraz w województwie lubuskim.
             </p>
           </div>
         </Reveal>

@@ -27,11 +27,11 @@ const ITEMS = [
   },
   {
     q: "Na jakim terenie działacie?",
-    a: "Głównie województwo opolskie: Namysłów, Opole, Kluczbork, Brzeg i okoliczne miejscowości. Szczegóły w sekcji Obszar działania.",
+    a: "Głównie Zielona Góra i województwo lubuskie — m.in. Nowa Sól, Sulechów, Świebodzin, Żagań, Żary i okolice. Szczegóły w sekcji Obszar działania.",
   },
   {
     q: "Czy robicie też serwis istniejących instalacji?",
-    a: "Tak. Przeglądy, uruchomienia i wsparcie pogwarancyjne w ramach oferty serwisowej powiązanej z montażami.",
+    a: "Tak. Serwis 24/7: przeglądy, awarie, uruchomienia i wsparcie pogwarancyjne — także dla instalacji montowanych wcześniej.",
   },
 ];
 

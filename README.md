@@ -1,6 +1,6 @@
-# AJM Technika
+# Instal-Plast
 
-Landing page AJM Technika (Namysłów) — pompy ciepła, klimatyzacja, kotły i rekuperacja.
+Landing page Instal-Plast (Zielona Góra) — kotły, pompy ciepła, klimatyzacja, serwis 24/7 i termowizja.
 
 Brief personalizacji: `PERSONALIZACJA.md`.
 

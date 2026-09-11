@@ -1,320 +1,182 @@
-# AJM Technika — brief personalizacji (demo → klient)
+# Instal-Plast — brief personalizacji
 
-Status: **Etap 1–4 wdrożone** (rebrand, usługi, sekcje home, treści/SEO podstron usług). Kolejne (Etap 5): mapa, GA4, sitemap, realny formularz.
+Status: **rebrand wdrożony** (dane, 7 usług, kolory `#ed5a24`, logo, treści home). TODO: opinie z Maps, NIP, kontur mapy lubuskiej, zdjęcia klienta, GA4, formularz.
 
-Źródła: ustalenia mailowe, [Google Maps](https://maps.app.goo.gl/ksyT4XjYrnGUiFpv6), logo lokalne, KRS / stara strona, decyzje z czatu.
+Źródła: stara strona [instal-plast.pl](https://instal-plast.pl/) / [.eu](https://instal-plast.eu/), [Google Maps](https://maps.app.goo.gl/WdbqeorkJrh6iCYh6), ustalenia z czatu.
 
 ---
 
 ## Decyzje zamknięte
 
-| #   | Temat                 | Decyzja                                                                                                                   |
-| --- | --------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Adres na stronie      | **Namysłów** — Łączańska 22C, 46-100 Namysłów                                                                             |
-| 2   | Godziny               | Z wizytówki / agregatorów Maps: **Pn–Sb 8:00–20:00, Nd zamknięte** (do weryfikacji przy wdrożeniu, jeśli Maps się zmieni) |
-| 3   | Obszar / miejscowości | Poniższa lista **10–15 sąsiednich** — **robocza, do wglądu i zmiany**                                                     |
-| 4   | Treści                | Drafty poniżej — wg usług z ustaleń + wyszukiwań branżowych                                                               |
-| 5   | Logotypy marek        | Przykładowe (+ **Midea** obowiązkowo) — do podmiany na oficjalne                                                          |
-| 6   | Opinie Google         | **Wolno cytować** na stronie                                                                                              |
-| 7   | NIP / faktura         | **Tak** — AJM Sp. z o.o., NIP **5562796248**                                                                              |
-| 8   | Zdjęcia               | **Podmienione na zdjęcia klienta** (`src/assets/ajm-*.jpg`) — home Realizacje + karty na podstronach usług                |
+| # | Temat | Decyzja |
+| --- | --- | --- |
+| 1 | Adres na stronie | **Zielona Góra** — Wrocławska 28, 65-427 Zielona Góra |
+| 2 | Godziny / serwis | **Serwis 24/7** (dyżur) wg starej strony; godziny biura z Maps — TODO |
+| 3 | Obszar | Zielona Góra + **województwo lubuskie** (lista miejscowości robocza) |
+| 4 | Kolor brandu | Accent **`#ed5a24`** (pomarańcz Instal-Plast) |
+| 5 | Opinie Google | **Bez wymyślonych cytatów** — CTA do wizytówki Maps |
+| 6 | NIP / REGON | Z katalogów — **TODO: potwierdzić z klientem** |
+| 7 | Logo | `src/assets/logo-instal-plast.png` |
+| 8 | Usługi | **7 usług** (patrz tabela) — osobne podstrony `/uslugi/{slug}` |
 
-Dodatkowo z ustaleń mailowych:
+Dodatkowo:
 
 - Bez bloga, bez panelu CMS.
-- Realizacje i Kontakt na home (osobne podstrony tylko jeśli później uznamy, że trzeba).
-- Usługi = osobne podstrony.
-- Cena / czas / hosting — poza zakresem tego briefu technicznego.
+- Realizacje i Kontakt na home.
+- Nazwy plików `ajm-*.jpg` w assets zostają (tylko nazwy plików).
 
 ---
 
 ## Dane firmy (do `site.ts` / stopki / SEO)
 
-| Pole                      | Wartość                                                                                       |
-| ------------------------- | --------------------------------------------------------------------------------------------- |
-| Marka (UI)                | **AJM Technika**                                                                              |
-| Nazwa wizytówki Google    | Pompy ciepła AJM Namysłów                                                                     |
-| Nazwa prawna              | **AJM Sp. z o.o.**                                                                            |
-| NIP                       | 5562796248                                                                                    |
-| REGON                     | 521998239                                                                                     |
-| KRS                       | 0000971177                                                                                    |
-| Adres (strona + mapa)     | Łączańska 22C, 46-100 Namysłów                                                                |
-| Telefon                   | 793 570 967 (`+48793570967`)                                                                  |
-| E-mail                    | kontakt@ajmtechnika.pl                                                                        |
-| Godziny                   | Pn–Sb 8:00–20:00, Nd zamknięte                                                                |
-| Maps / opinie             | https://maps.app.goo.gl/ksyT4XjYrnGUiFpv6                                                     |
-| Ocena (orientacyjnie)     | 5.0 / 5 (kilka opinii Google)                                                                 |
-| Logo                      | `Downloads/Logo AJMTechnika/` → preferowane **PNG** (wordmark AJM niebieski + Technika szary) |
-| Stara strona (referencja) | https://ajmtechnika.pl/                                                                       |
-
-Uwaga: w KRS siedziba to Oleśnica (Lwowska 31/101). **Na stronie kontaktowej używamy Namysłowa** (decyzja). Siedzibę KRS można ewentualnie wspomnieć w polityce prywatności / stopce prawnej — do decyzji przy wdrożeniu.
+| Pole | Wartość |
+| --- | --- |
+| Marka (UI) | **Instal-Plast** |
+| Nazwa prawna | PUH „INSTAL-PLAST” – Serwis Maciej Głowacki |
+| NIP | 9291670447 (**TODO: potwierdzić**) |
+| REGON | 978013130 (**TODO: potwierdzić**) |
+| Adres | Wrocławska 28, 65-427 Zielona Góra |
+| Telefon (kom.) | 603 930 929 (`+48603930929`) |
+| Telefon (stac.) | 68 453 32 82 (`+48684533282`) |
+| E-mail | instalplast@vp.pl |
+| Godziny | Serwis 24/7 (dyżur) |
+| Maps / opinie | https://maps.app.goo.gl/WdbqeorkJrh6iCYh6 |
+| Logo | `src/assets/logo-instal-plast.png` |
+| Stara strona | https://instal-plast.pl/ · https://instal-plast.eu/ |
+| Accent CSS | `#ed5a24` |
 
 ---
 
-## Obszar działania — lista robocza (DO WGLĄDU / ZMIANY)
+## Obszar działania — lista robocza
 
-Fokus: **woj. opolskie**, baza **Namysłów** + sąsiedztwo.
+Fokus: **woj. lubuskie**, baza **Zielona Góra**.
 
-1. Namysłów
-2. Byczyna
-3. Wołczyn
-4. Kluczbork
-5. Domaszowice
-6. Świerczów
-7. Pokój
-8. Murów
-9. Brzeg
-10. Lewin Brzeski
-11. Opole
-12. Oława
-13. Bierutów
-14. Oleśnica
-15. Dobrzeń Wielki
+1. Zielona Góra  
+2. Nowa Sól  
+3. Sulechów  
+4. Świebodzin  
+5. Krosno Odrzańskie  
+6. Kożuchów  
+7. Czerwieńsk  
+8. Żagań  
+9. Żary  
+10. Lubsko  
+11. Gubin  
+12. Szprotawa  
+13. Sława  
+14. Wschowa  
+15. Gorzów Wielkopolski  
 
-**Powiaty do wzmianki (roboczo):** namysłowski, kluczborski, brzeski, opolski (+ dojazd w regionie).
+**Powiaty (roboczo):** zielonogórski, nowosolski, świębodziński, krośnieński, żagański, żarski.
 
-**Frazy lokalne (przykłady SEO):**  
-„montaż pomp ciepła Namysłów”, „pompy ciepła Opole”, „klimatyzacja Namysłów”, „kotły pelletowe woj. opolskie”, „rekuperacja Brzeg” itd. — wpinane w H1/H2 i body podstron usług.
+**Frazy lokalne (SEO):**  
+„kotły gazowe Zielona Góra”, „pompy ciepła lubuskie”, „serwis kotłów 24/7 Zielona Góra”, „klimatyzacja Nowa Sól”, „termowizja Zielona Góra”.
 
----
-
-## Usługi (lista docelowa z ustaleń)
-
-Każda = osobny URL `/uslugi/{slug}`.
-
-| Usługa                 | Proponowany slug         |
-| ---------------------- | ------------------------ |
-| Pompy ciepła           | `pompy-ciepla`           |
-| Kotły pelletowe        | `kotly-pelletowe`        |
-| Ogrzewanie podłogowe   | `ogrzewanie-podlogowe`   |
-| Klimatyzacja           | `klimatyzacja`           |
-| Instalacje wodne       | `instalacje-wodne`       |
-| Instalacje sanitarne   | `instalacje-sanitarne`   |
-| Instalacje przemysłowe | `instalacje-przemyslowe` |
-| Rekuperacja            | `rekuperacja`            |
-| Uzdatnianie wody       | `uzdatnianie-wody`       |
-
-**Do usunięcia z dema:** „Kotły gazowe”, osobna podstrona „Serwis” (serwis zostaje jako krok procesu na podstronach).
-
-### Schemat podstrony usługi (z ustaleń)
-
-1. Nagłówek + krótki opis + CTA wycena / telefon
-2. Opisy: dlaczego warto, technologie/marki, zdjęcia
-3. Zakres prac (punkty) + teren działania
-4. Proces: oględziny i bezpłatna konsultacja → wycena → montaż i uruchomienie → serwis
-5. Realizacje tej usługi
-6. FAQ usługi
-7. Kontakt / formularz wyceny + telefon
-8. Odnośniki do pozostałych usług
+**Mapa:** etykiety miejscowości = lubuskie; kontur SVG nadal kształtu opolskiego — **TODO** wymienić.
 
 ---
 
-## Strona główna — sekcje (kolejność docelowa)
+## Usługi (7 — docelowa lista)
 
-1. Hero
-2. **O nas**
-3. Usługi (skrót + linki)
-4. Realizacje (zdjęcie, opis, lokalizacja, rodzaj instalacji) — zdjęcia klienta AJM
-5. Opinie (cytaty Google OK)
-6. **Dlaczego my**
-7. Marki i producenci (przykładowe + Midea)
-8. FAQ (ogólne)
-9. **Obszar działania**
-10. Kontakt + Bezpłatna wycena (mapa Namysłów, Zadzwoń/Napisz)
+| Usługa | Proponowany slug |
+| --- | --- |
+| Kotły gazowe | `kotly-gazowe` |
+| Kotły olejowe | `kotly-olejowe` |
+| Pompy ciepła | `pompy-ciepla` |
+| Klimatyzacja | `klimatyzacja` |
+| Serwis 24/7 | `serwis` |
+| Badania termowizyjne | `termowizja` |
+| Palniki / uruchomienia | `palniki` |
+
+*(Dokładna lista i treści — w `services.ts`; parent w trakcie aktualizacji.)*
+
+### Schemat podstrony usługi
+
+1. Nagłówek + krótki opis + CTA wycena / telefon  
+2. Opisy: dlaczego warto, technologie/marki  
+3. Zakres prac + teren działania  
+4. Proces: oględziny → wycena → montaż → serwis  
+5. Realizacje  
+6. FAQ  
+7. Kontakt + odnośniki do pozostałych usług  
 
 ---
 
-## Treści — drafty (do wglądu / edycji)
+## Strona główna — sekcje
 
-### Hero (propozycja)
+1. Hero (20+ lat, SERVICE_AREA, serwis 24/7)  
+2. O nas  
+3. Usługi  
+4. Marki  
+5. Realizacje  
+6. Opinie (CTA Google — bez cytatów)  
+7. Dlaczego my  
+8. FAQ  
+9. Obszar działania  
+10. Kontakt + wycena  
 
-- **Marka:** AJM Technika
-- **Nagłówek:** Komfortowe instalacje HVAC w Namysłowie i na Opolszczyźnie
-- **Lead:** Pompy ciepła, klimatyzacja, kotły pelletowe, rekuperacja i instalacje wodno-sanitarne — od doradztwa po montaż i serwis.
-- **CTA:** Bezpłatna wycena · Zadzwoń 793 570 967
+---
+
+## Treści — drafty
+
+### Hero
+
+- Lead: jedna ekipa od doboru przez montaż po serwis.  
+- Obszar: Zielona Góra i województwo lubuskie.  
+- Statystyki: 20+ lat doświadczenia · serwis 24/7.
 
 ### O nas
 
-AJM Technika to lokalny partner instalacji grzewczych, chłodniczych i sanitarnych z bazą w Namysłowie. Pomagamy właścicielom domów i firmom dobrać rozwiązanie dopasowane do budynku, budżetu i kosztów eksploatacji — od pompy ciepła i klimatyzacji, przez ogrzewanie podłogowe i rekuperację, po instalacje wodne, sanitarne oraz uzdatnianie wody.
-
-Stawiamy na czytelny proces: oględziny i bezpłatna konsultacja, konkretna wycena, solidny montaż z uruchomieniem oraz wsparcie serwisowe. Działamy na terenie województwa opolskiego i w sąsiednich miejscowościach.
+Instal-Plast — lokalny partner z Zielonej Góry: kotły gazowe i olejowe, pompy ciepła, klimatyzacja, serwis 24/7, termowizja. Proces: oględziny → wycena → montaż → serwis. Teren: woj. lubuskie.
 
 ### Dlaczego my
 
-1. **Kompleksowa oferta** — ogrzewanie, chłodzenie, wentylacja i woda w jednym zespole.
-2. **Bezpłatna konsultacja i wycena** — najpierw oględziny, potem decyzja.
-3. **Lokalny dojazd** — Namysłów, Opole i okolice.
-4. **Sprawdzone marki** — urządzenia znanych producentów, m.in. Midea.
-5. **Montaż i uruchomienie** — nie zostawiamy instalacji „w połowie”.
-6. **Serwis i opieka** — wsparcie także po oddaniu instalacji.
+1. Kompleksowa oferta (kotły, pompy, klima, serwis, termowizja).  
+2. Bezpłatna konsultacja i wycena.  
+3. Lokalny dojazd — Zielona Góra / lubuskie.
 
-### FAQ — ogólne (home)
+### FAQ (obszar + serwis)
 
-**Czy dojazd i pierwsza konsultacja są płatne?**  
-Pierwsze oględziny i konsultacja w naszym obszarze działania są bezpłatne. Na ich podstawie przygotowujemy wycenę.
+- Teren: Zielona Góra + lubuskie.  
+- Serwis istniejących instalacji: tak, **24/7**.
 
-**Jak długo trwa montaż pompy ciepła lub klimatyzacji?**  
-Zależy od zakresu i przygotowania budynku. Po oględzinach podajemy realistyczny termin — od kilku dni roboczych przy typowych instalacjach.
+### Opinie
 
-**Czy pomagacie z dofinansowaniem (np. Czyste Powietrze)?**  
-Doradzamy przy wyborze rozwiązania pod kątem programów wsparcia. Szczegóły aktualnych programów omawiamy indywidualnie.
+**Nie cytować wymyślonych opinii.** Sekcja = CTA do [Google Maps](https://maps.app.goo.gl/WdbqeorkJrh6iCYh6). Ocena zbiorcza — TODO odczytać z wizytówki.
 
-**Na jakim terenie działacie?**  
-Głównie województwo opolskie — Namysłów, Opole, Kluczbork, Brzeg i okoliczne miejscowości. Szczegóły w sekcji Obszar działania.
+### Marki (~6)
 
-**Czy robicie też serwis istniejących instalacji?**  
-Tak — przeglądy, uruchomienia i wsparcie pogwarancyjne w ramach oferty serwisowej powiązanej z montażami.
-
-### Opinie (cytaty Google — dozwolone)
-
-Źródło: wizytówka [Pompy ciepła AJM Namysłów](https://maps.app.goo.gl/ksyT4XjYrnGUiFpv6). Ocena zbiorcza ok. **5.0**. Przycisk: „Zobacz wszystkie opinie” → ten sam link.
-
-| Imię      | Treść                                                                  | Ocena | Rodzaj instalacji (do uzupełnienia / roboczo) |
-| --------- | ---------------------------------------------------------------------- | ----- | --------------------------------------------- |
-| Agata P.  | Szczerze polecam, naprawdę firma godna polecenia                       | 5★    | Pompa ciepła (roboczo)                        |
-| M t       | Firmę cechuje profesjonalizm i doświadczenie w instalacji pomp ciepła. | 5★    | Pompa ciepła                                  |
-| Adrian P. | Super! Gorąco polecam                                                  | 5★    | Pompa ciepła (roboczo)                        |
-
-Miejscowość przy opiniach: **Namysłów** / okolice — jeśli brak w Google, nie zmyślać; można pominąć lub „Klient Google”.
-
-### Bezpłatna wycena — pola formularza
-
-Imię · Telefon · E-mail · Wybór usługi · Wiadomość (oczekiwania) · Zgoda na kontakt.
-
-### Kontakt — bloki
-
-Telefon, e-mail, adres Namysłów, godziny, mapa (link Maps), przyciski **Zadzwoń** / **Napisz**.
+Viessmann · Buderus · Brötje · Airwell · Weishaupt · Flir  
+(opcjonalnie też: Riello, Giersch)
 
 ---
 
-## Treści skrótowe — usługi (home + hero podstron)
+## SEO / analityka (później)
 
-### Pompy ciepła
-
-Dobór i montaż pomp ciepła powietrze-woda dla domów i budynków użytkowych. Niższe koszty ogrzewania, chłodzenie i ciepło użytkowe w jednym systemie — z uruchomieniem i instruktażem.
-
-**FAQ (przykład):** Czy pompa ciepła ma sens w starszym domu? / Jak głośna jest jednostka zewnętrzna?
-
-**Fraza:** montaż pomp ciepła Namysłów · pompy ciepła Opole
-
-### Kotły pelletowe
-
-Montaż kotłów na pellet jako ekologiczne i wygodne źródło ciepła. Pomagamy dobrać moc, zbiornik na paliwo i integrację z instalacją CO.
-
-**Fraza:** kotły pelletowe Namysłów · montaż kotła na pellet Opole
-
-### Ogrzewanie podłogowe
-
-Projekt i montaż ogrzewania podłogowego wodnego — komfort termiczny, równomierna temperatura, dobre sparowanie z pompą ciepła lub kotłem.
-
-**Fraza:** ogrzewanie podłogowe Namysłów
-
-### Klimatyzacja
-
-Klimatyzacja split i multi-split: chłodzenie latem, dogrzewanie w przejściowych porach, montaż z odprowadzeniem skroplin i uruchomieniem.
-
-**Fraza:** klimatyzacja Namysłów · montaż klimatyzacji Opole
-
-### Instalacje wodne
-
-Instalacje wody użytkowej i obiegów w budynkach mieszkalnych oraz użytkowych — od przyłączy po rozprowadzenie i modernizacje.
-
-**Fraza:** instalacje wodne Namysłów
-
-### Instalacje sanitarne
-
-Kompleksowe instalacje sanitarne: kanalizacja, podejścia, wymiana pionów i modernizacja łazienek w zakresie instalacji.
-
-**Fraza:** instalacje sanitarne Namysłów · Opole
-
-### Instalacje przemysłowe
-
-Instalacje dla obiektów firmowych i przemysłowych — dobór rozwiązań pod ciągłość pracy, serwis i wymagania obiektu. Zakres ustalany po oględzinach.
-
-**Fraza:** instalacje przemysłowe Opole · Namysłów
-
-### Rekuperacja
-
-Wentylacja mechaniczna z odzyskiem ciepła — świeże powietrze bez wychładzania budynku, mniej wilgoci i lepszy komfort.
-
-**Fraza:** rekuperacja Namysłów · rekuperacja Opole
-
-### Uzdatnianie wody
-
-Stacje uzdatniania, zmiękczanie i filtracja — ochrona instalacji i AGD, lepsza jakość wody w domu.
-
-**Fraza:** uzdatnianie wody Namysłów · zmiękczacz wody Opole
-
-### Proces współpracy (wspólny na podstronach)
-
-1. Oględziny i bezpłatna konsultacja
-2. Wycena
-3. Montaż i uruchomienie
-4. Serwis
+- GA4 + Search Console  
+- Tytuły / opisy z frazami lokalnymi (Zielona Góra, lubuskie)  
+- sitemap.xml, alt, mobile, HTTPS  
+- NAP spójne z Zieloną Górą  
 
 ---
 
-## Marki — przykładowe logotypy (DO PODMIANY)
+## Checklist wdrożenia
 
-Cel: wiarygodność oferty, nie oficjalne partnerstwo (chyba że klient potwierdzi).
-
-| Obszar          | Przykłady                                                        |
-| --------------- | ---------------------------------------------------------------- |
-| Pompy / klima   | **Midea** (wymagane), Daikin, Panasonic, LG, Mitsubishi Electric |
-| Kotły / grzanie | Defro, Kostrzewa, Viessmann, Bosch                               |
-| Rekuperacja     | Zehnder, Vasco, Pro-Vent                                         |
-| Woda            | BWT, Honeywell (zawory/filtry) — orientacyjnie                   |
-
-Na starcie: nazwy jak w obecnym demie **+ Midea na pierwszym miejscu**. Docelowo pliki SVG/PNG od klienta lub z oficjalnych kitów prasowych (z zachowaniem wytycznych marek).
-
----
-
-## Logo — pliki źródłowe
-
-Ścieżka lokalna (u właściciela projektu):
-
-`c:\Users\Tymek\Downloads\Logo AJMTechnika\`
-
-- `Logo AJMTechnika.png` — preferowane na web
-- `Logo AJMTechnika.jpg` — wariant na jasnym tle
-- `.pdf` / `.cdr` — archiwum / druk
-
-Kolory brandu (z logo klienta, lekko ożywione): AJM azure ≈ `#007CC0` / `#1494D2`, Technika cool silver ≈ `#D0D4DC`. Tokeny CSS w `styles.css` (accent / navy / gradienty) dopasowane do tej palety — bez neonu.
+- [x] `site.ts` — dane Instal-Plast + aliasy eksportów  
+- [x] Logo `logo-instal-plast.png` + BrandMark  
+- [x] Home copy: About, Hero, Faq, WhyUs, Footer, ServiceArea, Brands, Testimonials (CTA)  
+- [x] SEO home (`index.tsx`)  
+- [x] PERSONALIZACJA.md / AGENTS.md  
+- [ ] `services.ts` — 7 usług + SEO lubuskie (parent)  
+- [ ] `styles.css` — accent `#ed5a24` (parent)  
+- [ ] Kontur mapy SVG → lubuskie  
+- [ ] Potwierdzić NIP / REGON z klientem  
+- [ ] Ocena Google z wizytówki  
+- [ ] Zdjęcia klienta (zamiast placeholderów)  
+- [ ] GA4, sitemap, realny formularz  
 
 ---
 
-## SEO / analityka (z ustaleń — na wdrożenie)
+## Historia
 
-- GA4 + Search Console
-- Tytuły, opisy, H1–H2 z frazami lokalnymi
-- Przyjazne URL usług
-- sitemap.xml, alt zdjęć, mobile, HTTPS, szybkie ładowanie
-- NAP spójne z Namysłowem
-
----
-
-## Checklist wdrożenia (później — nie teraz)
-
-- [x] Rebrand KLIMATPRO → AJM Technika + logo
-- [x] `site.ts`: telefon, mail, adres Namysłów, godziny, NIP, Maps
-- [x] Nowe sekcje home: O nas, Dlaczego my, Obszar działania
-- [x] Lista usług wg tabeli (pellet + wodne/sanitarne/przemysłowe/uzdatnianie; drop gaz/serwis page)
-- [x] Treści z tego pliku (home)
-- [x] Opinie Google + link „wszystkie”
-- [x] Marki: Midea + przykłady
-- [x] Treści / SEO podstron usług (H1, meta, intro, teren, FAQ)
-- [ ] Zdjęcia: zostają z dema
-- [ ] Mapa embed / link Maps
-- [ ] GA4, sitemap
-- [ ] Formularz wyceny → realna wysyłka
-
----
-
-## Historia decyzji
-
-- 2026-09-07 — zebranie danych z Maps/logo/KRS; decyzje 1–8 zapisane w tym pliku; treści draft; bez kodowania.
-- 2026-09-08 — **Etap 1 wdrożony:** rebrand AJM Technika, logo, dane firmy (`site.ts`), SEO title home, Hero/geo placeholdery → Namysłów; bez nowych sekcji/usług.
-- 2026-09-08 — Logo: balans bliżej oryginału klienta (azure + cool silver) + tokeny CSS dopasowane do logo (navy/accent/gradienty).
-- 2026-09-08 — **Etap 2:** 9 usług, proces 4-krokowy.
-- 2026-09-08 — **Etap 3:** O nas, Dlaczego my, Obszar działania, kolejność home, FAQ, opinie Google, Midea w markach.
-- 2026-09-08 — **Etap 4:** treści podstron usług (schemat maila): H1/meta z frazami Namysłów/Opole, intro z briefu, blok terenu działania, pełne FAQ.
+- 2026-09-11 — rebrand AJM Technika → Instal-Plast (Zielona Góra / lubuskie); brief przepisany.

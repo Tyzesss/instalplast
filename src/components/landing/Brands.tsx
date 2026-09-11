@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
 import { Reveal } from "./Reveal";
 
-/** Marki z montaży AJM (realizacje). */
+/** Marki z oferty Instal-Plast (kotły, palniki, klima, termowizja). */
 const BRANDS = [
-  { name: "Midea", className: "brand-wordmark--midea" },
-  { name: "Panasonic", className: "brand-wordmark--panasonic" },
-  { name: "Stiebel Eltron", className: "brand-wordmark--stiebel" },
-  { name: "Rotenso", className: "brand-wordmark--rotenso" },
-  { name: "Lazar", className: "brand-wordmark--lazar" },
-  { name: "Galmet", className: "brand-wordmark--galmet" },
+  { name: "Viessmann", className: "brand-wordmark--midea" },
+  { name: "Buderus", className: "brand-wordmark--bosch" },
+  { name: "Brötje", className: "brand-wordmark--stiebel" },
+  { name: "Airwell", className: "brand-wordmark--panasonic" },
+  { name: "Weishaupt", className: "brand-wordmark--rotenso" },
+  { name: "Flir", className: "brand-wordmark--galmet" },
 ] as const;
 
 export function Brands() {

@@ -111,11 +111,11 @@ export function Header({ alwaysSolid = false }: { alwaysSolid?: boolean }) {
         >
           {alwaysSolid ? (
             <Link to="/" aria-label={SITE_NAME}>
-              <BrandMark wordmarkClassName="h-7 sm:h-8" />
+              <BrandMark onDark wordmarkClassName="h-7 sm:h-8" />
             </Link>
           ) : (
             <a href="#top" aria-label={SITE_NAME} onClick={goTo("#top")}>
-              <BrandMark wordmarkClassName="h-7 sm:h-8" />
+              <BrandMark onDark wordmarkClassName="h-7 sm:h-8" />
             </a>
           )}
 

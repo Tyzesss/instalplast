@@ -17,7 +17,7 @@ const ITEMS: { title: string; body: string; icon: LucideIcon }[] = [
   },
   {
     title: "Lokalny dojazd",
-    body: "Namysłów, Opole i okolice. Jesteśmy blisko inwestycji.",
+    body: "Zielona Góra i województwo lubuskie. Jesteśmy blisko inwestycji.",
     icon: MapPinned,
   },
 ];

@@ -38,10 +38,10 @@ export function Footer() {
         <Reveal>
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <BrandMark />
+              <BrandMark onDark />
               <p className="mt-5 max-w-xs text-sm text-navy-foreground/60">
-                Instalacje grzewcze, chłodnicze i sanitarne w Namysłowie i na Opolszczyźnie: pompy
-                ciepła, klimatyzacja, kotły pelletowe i więcej. Montaż i serwis.
+                Kotły gazowe i olejowe, pompy ciepła, klimatyzacja, serwis 24/7 i termowizja w
+                Zielonej Górze oraz w województwie lubuskim. Montaż i serwis.
               </p>
             </div>
 
