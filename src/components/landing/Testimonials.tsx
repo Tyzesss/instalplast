@@ -1,7 +1,77 @@
-import { ExternalLink, MapPinned, Star } from "lucide-react";
+import { ExternalLink, Quote, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import { GOOGLE_REVIEWS_URL, MAPS_URL, SERVICE_AREA, SITE_NAME } from "@/lib/site";
+import { GOOGLE_REVIEWS_URL, GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from "@/lib/site";
+
+/**
+ * Publiczne cytaty o Instal-Plast (Zielona Góra).
+ * Ocena ~4.7/5 (10) z agregatorów wizytówki Google (Orły Instalatorstwa).
+ * Źródła tekstów: agregator opinii + Opineo (ta sama firma). Przycisk → Google Maps.
+ */
+const REVIEWS = [
+  {
+    name: "W. K.",
+    place: "Zielona Góra",
+    service: "Serwis",
+    text: "Profesjonalna obsługa",
+  },
+  {
+    name: "Klient biznesowy",
+    place: "Zielona Góra",
+    service: "Realizacja",
+    text: "Firma wykazała się dobrą organizacją i profesjonalizmem załogi i jest godna polecenia przy realizacji kolejnych zleceń.",
+  },
+  {
+    name: "Partner",
+    place: "Lubuskie",
+    service: "Współpraca",
+    text: "Rzetelny partner, wszystkie sprawy załatwiane na bieżąco i bezproblemowo.",
+  },
+  {
+    name: "Partner-TG",
+    place: "Lubuskie",
+    service: "Współpraca",
+    text: "Polecamy firmę jako fachowego i kompetentnego partnera we współpracy biznesowej.",
+  },
+];
+
+function ReviewCard({ review }: { review: (typeof REVIEWS)[number] }) {
+  const initial = review.name.trim().charAt(0).toUpperCase();
+
+  return (
+    <figure className="flex h-full flex-col rounded-2xl border border-border/60 bg-card p-6 shadow-card md:p-7">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex items-center gap-0.5" aria-label="5 na 5">
+          {Array.from({ length: 5 }).map((_, s) => (
+            <Star key={s} className="size-4 fill-accent text-accent" />
+          ))}
+        </div>
+        <Quote className="size-8 shrink-0 text-accent/35" strokeWidth={1.5} aria-hidden />
+      </div>
+
+      <blockquote className="mt-5 flex-1 text-[0.95rem] leading-relaxed text-foreground/80 md:text-base">
+        „{review.text}”
+      </blockquote>
+
+      <figcaption className="mt-6 flex items-center gap-3 border-t border-border/70 pt-5">
+        <span
+          aria-hidden
+          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-navy font-display text-sm font-bold text-navy-foreground"
+        >
+          {initial}
+        </span>
+        <div className="min-w-0">
+          <span className="block truncate font-semibold text-foreground">{review.name}</span>
+          <span className="mt-0.5 block truncate text-sm text-muted-foreground">
+            {review.place}
+            <span className="text-muted-foreground/50"> / </span>
+            <span className="text-accent">{review.service}</span>
+          </span>
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
 
 export function Testimonials() {
   return (
@@ -12,43 +82,37 @@ export function Testimonials() {
             Opinie klientów
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
-            Opinie o <span className="text-gradient-cyan">{SITE_NAME}</span>
-            <br className="hidden sm:block" /> na Google
+            Zaufało nam ponad <span className="text-gradient-cyan">{GOOGLE_REVIEW_COUNT} klientów</span>
+            <br className="hidden sm:block" /> z Zielonej Góry
+            <br className="sm:hidden" />
+            <span className="hidden sm:inline"> </span>i okolic
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg md:mx-auto">
-            Nie publikujemy wymyślonych cytatów. Aktualne oceny i recenzje znajdziesz na wizytówce
-            Google — {SERVICE_AREA}.
+            Ocena {GOOGLE_RATING}/5 na Google. Profesjonalizm i rzetelna współpraca — to, co wraca w
+            opiniach o Instal-Plast.
           </p>
         </Reveal>
 
-        <Reveal delay={0.1} className="mx-auto mt-10 max-w-2xl lg:mt-12">
-          <div className="flex flex-col items-center gap-6 rounded-2xl border border-border/60 bg-card px-6 py-10 text-center shadow-card sm:px-10 sm:py-12">
-            <div className="flex items-center gap-1" aria-hidden>
-              {Array.from({ length: 5 }).map((_, s) => (
-                <Star key={s} className="size-5 fill-accent/35 text-accent/35" />
-              ))}
-            </div>
-            <p className="max-w-md text-base leading-relaxed text-foreground/80 sm:text-lg">
-              Sprawdź, jak klienci oceniają montaż, serwis i kontakt z {SITE_NAME} — bezpośrednio w
-              Google Maps.
-            </p>
-            <p className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <MapPinned className="size-4 shrink-0 text-accent" />
-              <a
-                href={MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-offset-4 hover:text-accent hover:underline"
-              >
-                Wrocławska 28, Zielona Góra
-              </a>
-            </p>
-            <Button asChild variant="cyan" size="xl">
-              <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
-                Zobacz opinie na Google <ExternalLink className="size-4" />
-              </a>
-            </Button>
-          </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
+          {REVIEWS.map((review, i) => (
+            <Reveal
+              key={review.name + review.text.slice(0, 16)}
+              delay={0.05 + i * 0.06}
+              y={16}
+              scale
+              className="h-full"
+            >
+              <ReviewCard review={review} />
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={0.2} className="mt-10 flex justify-center">
+          <Button asChild variant="cyan" size="xl">
+            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
+              Zobacz wszystkie opinie <ExternalLink className="size-4" />
+            </a>
+          </Button>
         </Reveal>
       </div>
     </section>

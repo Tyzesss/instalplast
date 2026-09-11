@@ -223,15 +223,13 @@ export function Contact() {
                     </SelectTrigger>
                     <SelectContent className="rounded-lg">
                       {[
+                        "Kotły gazowe i olejowe",
                         "Pompy ciepła",
-                        "Kotły pelletowe",
-                        "Ogrzewanie podłogowe",
-                        "Klimatyzacja",
-                        "Instalacje wodne",
-                        "Instalacje sanitarne",
-                        "Instalacje przemysłowe",
-                        "Rekuperacja",
-                        "Uzdatnianie wody",
+                        "Klimatyzacja i wentylacja",
+                        "Badania termowizyjne",
+                        "Kotły na biopaliwa",
+                        "Systemy solarne",
+                        "Inne / nie wiem",
                       ].map((option) => (
                         <SelectItem key={option} value={option}>
                           {option}

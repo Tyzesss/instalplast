@@ -9,13 +9,9 @@ import heroImage from "@/assets/hero-hvac.png";
 import heroRightFill from "@/assets/hero-hvac-right.png";
 import { SERVICES } from "@/lib/services";
 
-/** Unikalne zdjęcia realizacji klienta (`ajm-*.jpg` w assets). */
-const INSTALLATION_PHOTOS = 20;
-
 const STATS = [
   { value: 20, suffix: "+", label: "Lat doświadczenia" },
-  { value: INSTALLATION_PHOTOS, suffix: "+", label: "Instalacji" },
-  { value: 24, suffix: "/7", label: "Serwis awaryjny" },
+  { value: 24, suffix: "/7", label: "Dyżur serwisowy" },
   { value: SERVICES.length, suffix: "", label: "Usług w ofercie" },
 ];
 
@@ -79,16 +75,16 @@ export function Hero() {
             </span>
 
             <h1 className="mt-4 font-display text-[clamp(2.7rem,7.8vw+0.55rem,3.5rem)] leading-[1.05] font-extrabold tracking-tight text-navy-foreground sm:mt-5 sm:text-7xl sm:tracking-normal lg:text-[5rem]">
-              <span className="sm:whitespace-nowrap">Instalacje grzewcze,</span>
+              <span className="sm:whitespace-nowrap">Kotły, pompy ciepła</span>
               <br />
               <span className="text-gradient-cyan sm:whitespace-nowrap">
-                chłodnicze i&nbsp;sanitarne.
+                i&nbsp;klimatyzacja.
               </span>
             </h1>
 
             <p className="mt-4 max-w-xl text-sm text-navy-foreground/75 sm:mt-5 sm:max-w-3xl sm:text-lg md:text-[1.2rem]">
               <span className="sm:whitespace-nowrap">
-                Jedna ekipa od doboru sprzętu przez montaż po uruchomienie i&nbsp;serwis.
+                Instal-Plast — sprzedaż, montaż i&nbsp;serwis w&nbsp;Zielonej Górze.
               </span>
               <br /> {SERVICE_AREA}.
             </p>
@@ -184,7 +180,7 @@ export function Hero() {
         transition={{ duration: reduce ? 0 : 0.65, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-x-0 bottom-0 z-30 hidden translate-y-1/2 px-3 sm:px-5 md:block lg:px-6"
       >
-        <div className="mx-auto grid max-w-6xl grid-cols-2 overflow-hidden rounded-2xl bg-background shadow-[0_6px_18px_-8px_oklch(0.155_0.045_242/0.1),0_2px_8px_-4px_oklch(0.155_0.045_242/0.05)] sm:grid-cols-4 sm:rounded-3xl">
+        <div className="mx-auto grid max-w-6xl grid-cols-3 overflow-hidden rounded-2xl bg-background shadow-[0_6px_18px_-8px_oklch(0.18_0.02_40/0.1),0_2px_8px_-4px_oklch(0.18_0.02_40/0.05)] sm:rounded-3xl">
           {STATS.map((stat, i) => (
             <motion.div
               key={stat.label}

@@ -40,8 +40,8 @@ export function Footer() {
             <div>
               <BrandMark onDark />
               <p className="mt-5 max-w-xs text-sm text-navy-foreground/60">
-                Kotły gazowe i olejowe, pompy ciepła, klimatyzacja, serwis 24/7 i termowizja w
-                Zielonej Górze oraz w województwie lubuskim. Montaż i serwis.
+                Kotły, pompy ciepła, klimatyzacja i solary — Instal-Plast w Zielonej Górze oraz w
+                województwie lubuskim. Montaż, uruchomienie i wsparcie serwisowe.
               </p>
             </div>
 

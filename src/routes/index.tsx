@@ -17,7 +17,7 @@ import { scrollToSection } from "@/lib/scroll-to-section";
 import { SITE_NAME, SITE_TITLE } from "@/lib/site";
 
 const title = SITE_TITLE;
-const description = `${SITE_NAME}: kotły gazowe i olejowe, pompy ciepła, klimatyzacja, serwis 24/7 i termowizja w Zielonej Górze oraz w województwie lubuskim. Bezpłatna wycena, montaż i serwis.`;
+const description = `${SITE_NAME}: kotły gazowe i olejowe, pompy ciepła, klimatyzacja, solary i termowizja w Zielonej Górze oraz w województwie lubuskim. Bezpłatna wycena, montaż i serwis.`;
 
 export const Route = createFileRoute("/")({
   head: () => ({

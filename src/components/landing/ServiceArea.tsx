@@ -3,7 +3,7 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { SERVICE_COUNTIES, SERVICE_TOWNS } from "@/lib/site";
 import { scrollToSection } from "@/lib/scroll-to-section";
-import { MAP_TOWNS, OPOLSKIE_PATH, OPOLSKIE_VIEWBOX } from "./opolskie-map-data";
+import { LUBUSKIE_PATH, LUBUSKIE_VIEWBOX, MAP_TOWNS } from "./lubuskie-map-data";
 import { Reveal } from "./Reveal";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -30,14 +30,14 @@ function AreaMap() {
   return (
     <div ref={rootRef} className="w-full">
       <svg
-        viewBox={OPOLSKIE_VIEWBOX}
+        viewBox={LUBUSKIE_VIEWBOX}
         role="img"
-        aria-label="Mapa obszaru działania — Zielona Góra i województwo lubuskie (kontur SVG tymczasowy)"
+        aria-label="Mapa województwa lubuskiego z zaznaczonymi miejscowościami"
         className="mx-auto h-auto w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-none"
       >
         <motion.path
           ref={pathRef}
-          d={OPOLSKIE_PATH}
+          d={LUBUSKIE_PATH}
           fill="oklch(0.68 0.17 40)"
           stroke="oklch(0.68 0.17 40)"
           strokeWidth={2}

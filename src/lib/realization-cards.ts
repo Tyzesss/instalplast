@@ -1,11 +1,8 @@
-import ajmPompaPanasonic from "@/assets/ajm-pompa-panasonic-aquarea.jpg";
-import ajmPompaMideaDach from "@/assets/ajm-pompa-midea-dach.jpg";
-import ajmPompaStiebel from "@/assets/ajm-pompa-stiebel-outdoor.jpg";
-import ajmJednostkiDuo from "@/assets/ajm-jednostki-zew-midea-duo.jpg";
-import ajmKotlowniaPanasonic from "@/assets/ajm-kotlownia-panasonic-galmet.jpg";
-import ajmKociolHlazar from "@/assets/ajm-kociol-hlazar-pellet.jpg";
-import ajmKotlowniaPellet from "@/assets/ajm-kotlownia-pellet-zasobniki.jpg";
-import ajmGalmetInstalacja from "@/assets/ajm-kotlownia-galmet-instalacja.jpg";
+import imgPompa from "@/assets/ip-realizacja-pompa.jpg";
+import imgKociol from "@/assets/ip-realizacja-kociol.jpg";
+import imgKlima from "@/assets/ip-realizacja-klima.jpg";
+import imgTermo from "@/assets/ip-realizacja-termowizja.jpg";
+import imgSolary from "@/assets/ip-realizacja-solary.jpg";
 
 export type RealizationCard = {
   title: string;
@@ -13,113 +10,77 @@ export type RealizationCard = {
   scope: string;
   image: string;
   alt: string;
-  /** object-position - kadr na urządzenie */
   focus?: string;
 };
 
-/** Domyślne kadry po pliku zdjęcia (wspólne dla usług). */
 const FOCUS: Record<string, string> = {
-  [ajmPompaPanasonic]: "50% 40%",
-  [ajmPompaMideaDach]: "50% 36%",
-  [ajmPompaStiebel]: "58% 40%",
-  [ajmJednostkiDuo]: "36% 28%",
-  [ajmKotlowniaPanasonic]: "48% 40%",
-  [ajmKociolHlazar]: "64% 36%",
-  [ajmKotlowniaPellet]: "52% 38%",
-  [ajmGalmetInstalacja]: "42% 40%",
+  [imgPompa]: "50% 45%",
+  [imgKociol]: "50% 42%",
+  [imgKlima]: "50% 40%",
+  [imgTermo]: "45% 40%",
+  [imgSolary]: "50% 40%",
 };
 
 function withFocus(card: Omit<RealizationCard, "focus">): RealizationCard {
   return { ...card, focus: FOCUS[card.image] ?? "50% 42%" };
 }
 
-/**
- * Tylko realne zdjęcia klienta dopasowane do danej usługi.
- * Brak pozycji = sekcja realizacji na podstronie się nie pokazuje.
- */
+/** Poglądowe zdjęcia AI — do podmiany na materiały klienta. */
 const BY_SERVICE: Record<string, Omit<RealizationCard, "focus">[]> = {
   "pompy-ciepla": [
     {
-      title: "Panasonic Aquarea",
+      title: "Pompa ciepła powietrze-woda",
       year: "2025",
-      scope: "Jednostka zewnętrzna na stopach betonowych.",
-      image: ajmPompaPanasonic,
-      alt: "Jednostka zewnętrzna Panasonic Aquarea na stopach betonowych",
-    },
-    {
-      title: "Kotłownia z hydroboxem",
-      year: "2025",
-      scope: "Hydrobox, zasobnik Galmet i naczynie wzbiorcze.",
-      image: ajmKotlowniaPanasonic,
-      alt: "Kotłownia z jednostką Panasonic i zasobnikiem Galmet",
-    },
-    {
-      title: "Montaż dachowy Midea",
-      year: "2025",
-      scope: "Montaż jednostki zewnętrznej na dachu.",
-      image: ajmPompaMideaDach,
-      alt: "Jednostka zewnętrzna Midea zamontowana na dachu",
-    },
-    {
-      title: "Stiebel Eltron",
-      year: "2025",
-      scope: "Jednostka zewnętrzna na budowie przy elewacji.",
-      image: ajmPompaStiebel,
-      alt: "Jednostka zewnętrzna Stiebel Eltron na cegłach",
+      scope: "Jednostka zewnętrzna przy domu jednorodzinnym.",
+      image: imgPompa,
+      alt: "Jednostka zewnętrzna pompy ciepła przy domu",
     },
   ],
   "kotly-gazowe-olejowe": [
     {
       title: "Kotłownia gazowa",
       year: "2025",
-      scope: "Kocioł, zasobnik CWU i orurowanie.",
-      image: ajmKotlowniaPellet,
-      alt: "Kotłownia z kotłem i zasobnikami",
-    },
-    {
-      title: "Urządzenie w kotłowni",
-      year: "2025",
-      scope: "Montaż kotła w pomieszczeniu technicznym.",
-      image: ajmKociolHlazar,
-      alt: "Kocioł w kotłowni po montażu",
+      scope: "Kocioł kondensacyjny i orurowanie.",
+      image: imgKociol,
+      alt: "Kocioł gazowy w kotłowni",
     },
   ],
   "kotly-biopaliwa": [
     {
-      title: "Kocioł na biopaliwa",
+      title: "Kotłownia na biopaliwa",
       year: "2025",
-      scope: "Montaż kotła w kotłowni.",
-      image: ajmKociolHlazar,
-      alt: "Kocioł na biopaliwa w kotłowni",
-    },
-    {
-      title: "Kotłownia z zasobnikami",
-      year: "2025",
-      scope: "Kocioł, zasobnik CWU i bufor.",
-      image: ajmKotlowniaPellet,
-      alt: "Kotłownia z kotłem i zasobnikami",
+      scope: "Montaż kotła w pomieszczeniu technicznym.",
+      image: imgKociol,
+      alt: "Kotłownia po montażu",
     },
   ],
   "klimatyzacja-wentylacja": [
     {
-      title: "Jednostki zewnętrzne",
-      year: "2023",
-      scope: "Dwie jednostki zewnętrzne na bloczkach betonowych.",
-      image: ajmJednostkiDuo,
-      alt: "Dwie jednostki zewnętrzne klimatyzacji przy elewacji",
-    },
-  ],
-  "serwis-konserwacja": [
-    {
-      title: "Kotłownia po serwisie",
+      title: "Klimatyzacja multi-split",
       year: "2025",
-      scope: "Zasobnik i orurowanie w pomieszczeniu technicznym.",
-      image: ajmGalmetInstalacja,
-      alt: "Kotłownia z zasobnikiem po przeglądzie",
+      scope: "Jednostki zewnętrzne na elewacji.",
+      image: imgKlima,
+      alt: "Jednostki zewnętrzne klimatyzacji",
     },
   ],
-  "badania-termowizyjne": [],
-  solary: [],
+  "badania-termowizyjne": [
+    {
+      title: "Badanie termowizyjne",
+      year: "2025",
+      scope: "Inspekcja mostków cieplnych elewacji.",
+      image: imgTermo,
+      alt: "Pomiar termowizyjny budynku",
+    },
+  ],
+  solary: [
+    {
+      title: "Kolektory słoneczne",
+      year: "2025",
+      scope: "Montaż na dachu domu.",
+      image: imgSolary,
+      alt: "Kolektory solarne na dachu",
+    },
+  ],
 };
 
 export function getServiceRealizationCards(slug: string): RealizationCard[] {

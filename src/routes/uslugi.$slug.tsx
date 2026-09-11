@@ -30,26 +30,22 @@ import sidePompy from "@/assets/service-side-pompy-ciepla.png";
 import sideKotly from "@/assets/service-side-kotly-pelletowe.png";
 import sidePodlogowe from "@/assets/service-side-podlogowe.png";
 import sideKlima from "@/assets/service-side-klimatyzacja.png";
-import sidePrzemyslowe from "@/assets/service-side-przemyslowe.png";
 import sideWoda from "@/assets/service-side-uzdatnianie.png";
 import faqBgPompy from "@/assets/faq-bg-pompy-ciepla.png";
 import faqBgKotly from "@/assets/faq-bg-kotly-pelletowe.png";
 import faqBgPodlogowe from "@/assets/faq-bg-ogrzewanie-podlogowe.png";
 import faqBgKlima from "@/assets/faq-bg-klimatyzacja.png";
-import faqBgPrzemyslowe from "@/assets/faq-bg-instalacje-przemyslowe.png";
 import faqBgUzdatnianie from "@/assets/faq-bg-uzdatnianie-wody.png";
 import heroPompy from "@/assets/service-hero-pompy-ciepla.png";
 import heroKotly from "@/assets/service-hero-kotly-pelletowe.png";
 import heroPodlogowe from "@/assets/service-hero-ogrzewanie-podlogowe.png";
 import heroKlima from "@/assets/service-hero-klimatyzacja.png";
-import heroPrzemyslowe from "@/assets/service-hero-instalacje-przemyslowe.png";
 import heroUzdatnianie from "@/assets/service-hero-uzdatnianie-wody.png";
 
 const HERO_IMAGES: Record<string, { src: string; position?: string }> = {
   "kotly-gazowe-olejowe": { src: heroKotly, position: "55% 40%" },
   "pompy-ciepla": { src: heroPompy, position: "65% 45%" },
   "klimatyzacja-wentylacja": { src: heroKlima, position: "70% 40%" },
-  "serwis-konserwacja": { src: heroPrzemyslowe, position: "60% 40%" },
   "badania-termowizyjne": { src: heroUzdatnianie, position: "55% 45%" },
   "kotly-biopaliwa": { src: heroKotly, position: "55% 40%" },
   solary: { src: heroPodlogowe, position: "60% 45%" },
@@ -70,11 +66,6 @@ const FAQ_BACKGROUNDS: Record<string, { src: string; alt: string; position?: str
     src: faqBgKlima,
     alt: "Klimatyzacja w nowoczesnym salonie",
     position: "60% 35%",
-  },
-  "serwis-konserwacja": {
-    src: faqBgPrzemyslowe,
-    alt: "Serwis instalacji grzewczych",
-    position: "45% 40%",
   },
   "badania-termowizyjne": {
     src: faqBgUzdatnianie,
@@ -112,11 +103,6 @@ const IMAGES: Record<
     alt: "Jednostki zewnętrzne klimatyzacji przy elewacji",
     position: "50% 45%",
   },
-  "serwis-konserwacja": {
-    src: sidePrzemyslowe,
-    alt: "Serwis i konserwacja instalacji HVAC",
-    position: "50% 42%",
-  },
   "badania-termowizyjne": {
     src: sideWoda,
     alt: "Badanie termowizyjne instalacji i budynku",
@@ -139,7 +125,6 @@ const CARD_THUMBS: Record<string, { src: string; position: string }> = {
   "kotly-gazowe-olejowe": { src: sideKotly, position: "48% 42%" },
   "pompy-ciepla": { src: sidePompy, position: "50% 45%" },
   "klimatyzacja-wentylacja": { src: sideKlima, position: "50% 45%" },
-  "serwis-konserwacja": { src: sidePrzemyslowe, position: "50% 42%" },
   "badania-termowizyjne": { src: sideWoda, position: "48% 40%" },
   "kotly-biopaliwa": { src: sideKotly, position: "48% 42%" },
   solary: { src: sidePodlogowe, position: "50% 55%" },

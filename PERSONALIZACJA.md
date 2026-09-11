@@ -1,6 +1,6 @@
 # Instal-Plast — brief personalizacji
 
-Status: **rebrand wdrożony** (dane, 7 usług, kolory `#ed5a24`, logo, treści home). TODO: opinie z Maps, NIP, kontur mapy lubuskiej, zdjęcia klienta, GA4, formularz.
+Status: **rebrand wdrożony** (dane, 6 usług, kolory `#ed5a24`, logo, mapa lubuska, poglądowe realizacje AI). TODO: opinie z Maps, NIP, zdjęcia klienta, GA4, formularz.
 
 Źródła: stara strona [instal-plast.pl](https://instal-plast.pl/) / [.eu](https://instal-plast.eu/), [Google Maps](https://maps.app.goo.gl/WdbqeorkJrh6iCYh6), ustalenia z czatu.
 
@@ -17,7 +17,7 @@ Status: **rebrand wdrożony** (dane, 7 usług, kolory `#ed5a24`, logo, treści h
 | 5 | Opinie Google | **Bez wymyślonych cytatów** — CTA do wizytówki Maps |
 | 6 | NIP / REGON | Z katalogów — **TODO: potwierdzić z klientem** |
 | 7 | Logo | `src/assets/logo-instal-plast.png` |
-| 8 | Usługi | **7 usług** (patrz tabela) — osobne podstrony `/uslugi/{slug}` |
+| 8 | Usługi | **6 usług** (bez osobnej podstrony serwisu) — `/uslugi/{slug}` |
 
 Dodatkowo:
 
@@ -72,21 +72,22 @@ Fokus: **woj. lubuskie**, baza **Zielona Góra**.
 **Frazy lokalne (SEO):**  
 „kotły gazowe Zielona Góra”, „pompy ciepła lubuskie”, „serwis kotłów 24/7 Zielona Góra”, „klimatyzacja Nowa Sól”, „termowizja Zielona Góra”.
 
-**Mapa:** etykiety miejscowości = lubuskie; kontur SVG nadal kształtu opolskiego — **TODO** wymienić.
+**Mapa:** kontur + kropki lokalizacji wg projekcji geo województwa lubuskiego.
 
 ---
 
-## Usługi (7 — docelowa lista)
+## Usługi (6)
 
-| Usługa | Proponowany slug |
+| Usługa | Slug |
 | --- | --- |
-| Kotły gazowe | `kotly-gazowe` |
-| Kotły olejowe | `kotly-olejowe` |
+| Kotły gazowe i olejowe | `kotly-gazowe-olejowe` |
 | Pompy ciepła | `pompy-ciepla` |
-| Klimatyzacja | `klimatyzacja` |
-| Serwis 24/7 | `serwis` |
-| Badania termowizyjne | `termowizja` |
-| Palniki / uruchomienia | `palniki` |
+| Klimatyzacja i wentylacja | `klimatyzacja-wentylacja` |
+| Badania termowizyjne | `badania-termowizyjne` |
+| Kotły na biopaliwa | `kotly-biopaliwa` |
+| Systemy solarne | `solary` |
+
+Bez osobnej podstrony „Serwis” (serwis zostaje w procesie / USP).
 
 *(Dokładna lista i treści — w `services.ts`; parent w trakcie aktualizacji.)*
 

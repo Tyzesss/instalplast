@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 const ITEMS: { title: string; body: string; icon: LucideIcon }[] = [
   {
     title: "Kompleksowa oferta",
-    body: "Ogrzewanie, chłodzenie, wentylacja i woda w jednym zespole.",
+    body: "Kotły, pompy ciepła, klimatyzacja, solary i termowizja w jednym zespole.",
     icon: BadgeCheck,
   },
   {
@@ -50,8 +50,7 @@ export function WhyUs() {
             Co zyskujesz, wybierając <span className="text-gradient-cyan">nas</span>
           </h2>
           <p className="mt-4 hidden max-w-2xl text-base leading-relaxed text-navy-foreground/70 sm:block sm:text-lg">
-            Lokalny dojazd, czytelny proces i kompletna oferta instalacji grzewczych, chłodniczych i
-            sanitarnych.
+            Lokalny dojazd, czytelny proces i oferta grzewczo-chłodnicza dopasowana do Lubuskiego.
           </p>
         </Reveal>
 

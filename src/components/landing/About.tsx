@@ -1,4 +1,4 @@
-import aboutImage from "@/assets/about-ajm-real-tech.png";
+import aboutImage from "@/assets/ip-realizacja-pompa.jpg";
 import { SITE_NAME } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
@@ -39,9 +39,9 @@ export function About() {
               <br className="md:hidden" />
               Pomagamy właścicielom domów i firmom dobrać rozwiązanie pod budynek i budżet: od{" "}
               <span className="font-semibold text-foreground">kotłów gazowych i olejowych</span>, przez{" "}
-              <span className="font-semibold text-foreground">pompy ciepła</span> i{" "}
-              <span className="font-semibold text-foreground">klimatyzację</span>, po{" "}
-              <span className="font-semibold text-foreground">serwis 24/7</span> oraz{" "}
+              <span className="font-semibold text-foreground">pompy ciepła</span>,{" "}
+              <span className="font-semibold text-foreground">klimatyzację</span> i{" "}
+              <span className="font-semibold text-foreground">solary</span>, po{" "}
               <span className="font-semibold text-foreground">badania termowizyjne</span>.
             </p>
           </Reveal>

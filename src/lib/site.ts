@@ -2,7 +2,7 @@
 
 export const SITE_NAME = "Instal-Plast";
 export const SITE_TITLE =
-  "Instal-Plast — kotły, pompy ciepła, klimatyzacja i serwis | Zielona Góra";
+  "Instal-Plast — kotły, pompy ciepła, klimatyzacja | Zielona Góra";
 export const COMPANY_LEGAL_NAME = 'PUH „INSTAL-PLAST” – Serwis Maciej Głowacki';
 
 export const EMAIL = "instalplast@vp.pl";
@@ -67,44 +67,44 @@ export const SERVICE_COUNTIES = [
 export const NIP = "9291670447";
 export const REGON = "978013130";
 
-/** Serwis 24/7 wg starej strony; godziny biura z Maps — TODO. */
-export const HOURS = "Serwis 24/7 (dyżur)";
+/** Serwis 24/7 wg starej strony; biuro z agregatorów Maps: Pn–Pt 7:00–16:00. */
+export const HOURS = "Pn-Pt: 7:00-16:00 · Serwis 24/7";
 
 export const GOOGLE_REVIEWS_URL = MAPS_URL;
-/** TODO: odczytać aktualną ocenę z wizytówki Maps. */
-export const GOOGLE_RATING = "";
-export const GOOGLE_REVIEW_COUNT = 0;
+/** Orientacyjnie z agregatorów wizytówki (Orły / Maps) — ~4.7/5 przy ~10 opiniach. */
+export const GOOGLE_RATING = "4.7";
+export const GOOGLE_REVIEW_COUNT = 10;
 
-/** Realizacje do podstron usług (match w services.ts). Placeholdery do czasu zdjęć klienta. */
+/** Realizacje do podstron usług (match w services.ts). Poglądowe — do podmiany. */
 export const REALIZATIONS = [
   {
     title: "Kotłownia gazowa kondensacyjna",
-    year: "2024",
-    scope: "Montaż kotła gazowego i uruchomienie kotłowni w domu jednorodzinnym.",
+    year: "2025",
+    scope: "Montaż kotła gazowego i uruchomienie kotłowni.",
   },
   {
     title: "Pompa ciepła powietrze-woda",
     year: "2025",
-    scope: "Jednostka zewnętrzna i hydrobox w domu jednorodzinnym.",
+    scope: "Jednostka zewnętrzna przy domu jednorodzinnym.",
   },
   {
-    title: "Klimatyzacja split",
+    title: "Klimatyzacja multi-split",
     year: "2024",
-    scope: "Jednostka ścienna, freon i odprowadzenie skroplin.",
-  },
-  {
-    title: "Serwis kotła gazowego",
-    year: "2025",
-    scope: "Przegląd, analiza spalin i protokół serwisowy.",
+    scope: "Jednostki zewnętrzne na elewacji budynku.",
   },
   {
     title: "Badanie termowizyjne budynku",
     year: "2024",
-    scope: "Kamera Flir — lokalizacja mostków cieplnych i braków izolacji.",
+    scope: "Lokalizacja mostków cieplnych i braków izolacji.",
   },
   {
-    title: "Kotłownia olejowa",
-    year: "2023",
-    scope: "Montaż kotła olejowego i integracja z instalacją c.o.",
+    title: "Kolektory słoneczne",
+    year: "2025",
+    scope: "Montaż systemu solarnego na dachu.",
+  },
+  {
+    title: "Kotłownia na biopaliwa",
+    year: "2024",
+    scope: "Montaż kotła i integracja z instalacją c.o.",
   },
 ] as const;

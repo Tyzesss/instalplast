@@ -225,48 +225,6 @@ export const SERVICES: Service[] = [
     match: ["klimatyz", "wentylac", "split", "airwell"],
   },
   {
-    slug: "serwis-konserwacja",
-    title: "Serwis i konserwacja",
-    titleOf: "serwisu i konserwacji",
-    headline: "Serwis kotłów i instalacji — Zielona Góra, dyżur 24/7",
-    seoTitle: "Serwis kotłów Zielona Góra | Viessmann, Brötje | Instal-Plast",
-    seoDescription:
-      "Serwis i konserwacja kotłów Viessmann, Buderus, Brötje, Weishaupt, Riello, Koerting, Giersch. Dyżur 24/7. Zielona Góra i Lubuskie.",
-    short: "Przeglądy, naprawy i dyżur 24/7 — kotły i instalacje grzewcze.",
-    intro:
-      "Stały nadzór nad systemami grzewczymi: konserwacja, przeglądy techniczne i bieżące naprawy. Dyżur telefoniczny 24/7.",
-    area: AREA_DEFAULT,
-    sections: [
-      {
-        heading: "Opieka techniczna nad kotłownią",
-        body: "W ramach umowy prowadzimy konserwację urządzeń cieplnych, naprawy i regularne przeglądy. Każdy przegląd kończy się protokołem serwisowym.",
-      },
-      {
-        heading: "Marki i dyżur",
-        body: "Serwisujemy m.in. Viessmann, Buderus, Brötje, Weishaupt, Riello, Koerting i Giersch. Telefon serwisowy czynny całodobowo.",
-      },
-    ],
-    bullets: [
-      "Przeglądy gwarancyjne i pogwarancyjne",
-      "Analiza spalin i pomiary",
-      "Serwis Viessmann, Buderus, Brötje i innych",
-      "Dokumentacja i protokoły",
-      "Dyżur 24/7",
-      "Obsługa techniczna nieruchomości",
-    ],
-    faq: [
-      {
-        q: "Czy serwis jest dostępny w nocy?",
-        a: "Tak — deklarujemy dyżur 24/7 w zakresie awarii instalacji grzewczych i pokrewnych.",
-      },
-      {
-        q: "Czy robicie przeglądy okresowe na umowę?",
-        a: "Tak — to dobre rozwiązanie dla firm i instytucji z kotłowniami.",
-      },
-    ],
-    match: ["serwis", "przegląd", "konserwac", "napraw"],
-  },
-  {
     slug: "badania-termowizyjne",
     title: "Badania termowizyjne",
     titleOf: "badań termowizyjnych",

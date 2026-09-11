@@ -7,7 +7,6 @@ import {
   Snowflake,
   Sun,
   Thermometer,
-  Wrench,
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
@@ -17,7 +16,6 @@ const ICONS: Record<string, LucideIcon> = {
   "kotly-gazowe-olejowe": Flame,
   "pompy-ciepla": Thermometer,
   "klimatyzacja-wentylacja": Snowflake,
-  "serwis-konserwacja": Wrench,
   "badania-termowizyjne": Camera,
   "kotly-biopaliwa": Leaf,
   solary: Sun,
@@ -62,8 +60,8 @@ export function Services() {
               <span className="text-gradient-cyan">dla domu i biznesu</span>
             </h2>
             <p className="mt-4 max-w-2xl text-muted-foreground">
-              Kotły gazowe i olejowe, pompy ciepła, klimatyzacja, serwis 24/7 i termowizja. Dobór,
-              montaż i serwis w Zielonej Górze oraz w województwie lubuskim.
+              Kotły gazowe i olejowe, pompy ciepła, klimatyzacja, solary i termowizja. Dobór, montaż
+              i uruchomienie w Zielonej Górze oraz w województwie lubuskim.
             </p>
           </div>
         </Reveal>
