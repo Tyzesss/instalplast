@@ -29,11 +29,11 @@ export function Hero() {
       className="relative z-20 isolate overflow-x-clip bg-navy max-md:min-h-[118svh] md:h-[108svh] md:min-h-[108svh]"
     >
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Same crop as demo-v4; right fill is glued outside the photo so framing stays identical */}
-        <div className="relative size-full origin-[80%_65%] scale-[1.2] -translate-x-[1%] translate-y-[2%] max-md:origin-[80%_42%] max-md:scale-[1.2] max-md:translate-x-0 max-md:-translate-y-[10%] lg:scale-[1.18] lg:translate-x-[1%]">
+        {/* Dusk hero with navy-graded top (demo-v4 / AJM pattern) for Safari + navbar blend */}
+        <div className="relative size-full origin-[80%_65%] scale-[1.18] translate-x-[2%] translate-y-[2%] max-md:origin-[80%_42%] max-md:scale-[1.2] max-md:translate-x-0 max-md:-translate-y-[10%] lg:scale-[1.15] lg:translate-x-[3%]">
           <motion.img
             src={heroImage}
-            alt="Pompa ciepła przy nowoczesnym domu - Instal-Plast"
+            alt="Pompa ciepła przy nowoczesnym domu o zmierzchu - Instal-Plast"
             width={1280}
             height={720}
             fetchPriority="high"
@@ -41,7 +41,7 @@ export function Hero() {
             initial={reduce ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: reduce ? 0 : 1.1, ease: [0.22, 1, 0.36, 1] }}
-            className="size-full object-cover object-[70%_45%] max-md:object-[72%_35%]"
+            className="size-full object-cover object-[88%_60%] max-md:object-[88%_38%]"
           />
           <div
             className="pointer-events-none absolute inset-y-0 left-full w-[18%] max-md:hidden"
@@ -50,7 +50,7 @@ export function Hero() {
             <img
               src={heroRightFill}
               alt=""
-              width={276}
+              width={320}
               height={720}
               decoding="async"
               className="size-full object-cover object-left"

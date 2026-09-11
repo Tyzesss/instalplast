@@ -113,12 +113,13 @@
   --sidebar-border: oklch(0.91 0.01 40);
   --sidebar-ring: oklch(0.68 0.17 40);
 
-  /* Gradients - same --navy as navbar, hero, footer, and dark sections */
+  /* Gradients - same --navy as navbar, hero, footer, and dark sections.
+     Top stop stays near-opaque so Safari chrome + fixed nav blend into the dusk sky. */
   --gradient-hero: linear-gradient(
     180deg,
-    oklch(from var(--navy) l c h / 0.94) 0%,
-    oklch(from var(--navy) l c h / 0.82) 10%,
-    oklch(from var(--navy) l c h / 0.7) 45%,
+    oklch(from var(--navy) l c h / 0.97) 0%,
+    oklch(from var(--navy) l c h / 0.88) 8%,
+    oklch(from var(--navy) l c h / 0.72) 42%,
     oklch(from var(--navy) l c h / 0.94) 100%
   );
   --gradient-service-hero: linear-gradient(
